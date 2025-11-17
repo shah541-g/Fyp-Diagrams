@@ -1,0 +1,224 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
+  <diagram name="Philbox Deployment Diagram" id="hzRa6YfAdoauaft453ex">
+    <mxGraphModel dx="2153" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PXlpdK_PIDM-b167QIi4-57" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-30" width="1930" height="1570" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-1" value="Client Devices" style="swimlane;fillColor=#E1F5FF;strokeColor=#01579B;strokeWidth=2;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="1760" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-2" value="&amp;lt;&amp;lt;device&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Customer&lt;br&gt;Web Browser&lt;/b&gt;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-1">
+          <mxGeometry x="50" y="40" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-3" value="&amp;lt;&amp;lt;device&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Doctor&lt;br&gt;Web Browser&lt;/b&gt;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-1">
+          <mxGeometry x="490" y="40" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-4" value="&amp;lt;&amp;lt;device&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Salesperson&lt;br&gt;Web Browser&lt;/b&gt;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-1">
+          <mxGeometry x="930" y="40" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-5" value="&amp;lt;&amp;lt;device&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Admin&lt;br&gt;Web Browser&lt;/b&gt;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-1">
+          <mxGeometry x="1370" y="40" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-6" value="Presentation Layer" style="swimlane;fillColor=#F3E5F5;strokeColor=#4A148C;strokeWidth=2;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="220" width="1760" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-7" value="&amp;lt;&amp;lt;execution environment&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Web Server (NGINX)&lt;/b&gt;&lt;hr&gt;&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;React.js Frontend Application&lt;br&gt;(Customer, Doctor, Salesperson, Admin UIs)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#e1d5e7;strokeColor=#9673a6;align=center;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-6">
+          <mxGeometry x="680" y="40" width="400" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-8" value="Business Logic Layer" style="swimlane;fillColor=#E8F5E9;strokeColor=#1B5E20;strokeWidth=2;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="1760" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-9" value="&amp;lt;&amp;lt;execution environment&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Application Server&lt;/b&gt;&lt;br&gt;(Node.js + Express.js)&lt;hr&gt;&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;Philbox Backend API&lt;hr&gt;&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;• jsonwebtoken&lt;br&gt;• Passport.js&lt;br&gt;• bcryptjs&lt;br&gt;• speakeasy&lt;br&gt;• express-sslify&lt;br&gt;• express-rate-limit&lt;br&gt;• crypto • xlsx&lt;br&gt;• jsPDF • Socket.IO&lt;br&gt;• Multer • dotenv&lt;br&gt;• node-cron" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;spacingLeft=10;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-8">
+          <mxGeometry x="240" y="40" width="340" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-10" value="&amp;lt;&amp;lt;execution environment&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;AI Microservices Server&lt;/b&gt;&lt;br&gt;(FastAPI + Python)&lt;hr&gt;&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;• Sentiment Analysis&lt;br&gt;  Microservice (BERT)&lt;br&gt;• Recommendation Engine&lt;br&gt;  Microservice (TensorFlow)&lt;hr&gt;&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;• TextBlob&lt;br&gt;• TensorFlow" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;spacingLeft=10;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-8">
+          <mxGeometry x="1310" y="30" width="340" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-36" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#1B5E20;exitX=1.001;exitY=0.223;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.002;entryY=0.358;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="PXlpdK_PIDM-b167QIi4-8" source="PXlpdK_PIDM-b167QIi4-9" target="PXlpdK_PIDM-b167QIi4-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="210" as="sourcePoint" />
+            <mxPoint x="1310" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-11" value="&lt;b&gt;Data Layer&lt;/b&gt;" style="swimlane;fillColor=#FFF3E0;strokeColor=#E65100;strokeWidth=2;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="910" width="580" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-12" value="&amp;lt;&amp;lt;execution environment&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;MongoDB Atlas Cluster&lt;/b&gt;&lt;hr&gt;&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;Philbox Database (MongoDB)&lt;hr&gt;&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;• Mongoose" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-11">
+          <mxGeometry x="180" y="40" width="220" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-13" value="&lt;b&gt;External Services (Cloud/Third-Party APIs)&lt;/b&gt;" style="swimlane;fillColor=#FCE4EC;strokeColor=#880E4F;strokeWidth=2;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="700" y="910" width="790" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-14" value="&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Cloudinary&lt;/b&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-13">
+          <mxGeometry x="40" y="40" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-15" value="&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Stripe API&lt;/b&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-13">
+          <mxGeometry x="230" y="40" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-16" value="&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;JazzCash API&lt;/b&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-13">
+          <mxGeometry x="390" y="40" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-17" value="&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;EasyPaisa API&lt;/b&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-13">
+          <mxGeometry x="550" y="40" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-18" value="&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Nodemailer&lt;/b&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-13">
+          <mxGeometry x="40" y="150" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-19" value="&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;SendGrid / AWS SES&lt;/b&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-13">
+          <mxGeometry x="220" y="150" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-21" value="&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Streamify / Twilio Video&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;/ Custom Calling&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;System&lt;br&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-13">
+          <mxGeometry x="400" y="150" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-22" value="&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Google Maps API&lt;/b&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-13">
+          <mxGeometry x="40" y="260" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-26" value="Deployment Orchestration" style="swimlane;fillColor=#F5F5F5;strokeColor=#424242;strokeWidth=2;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="1170" width="580" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-27" value="&amp;lt;&amp;lt;container&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Docker&lt;/b&gt;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#e0e0e0;strokeColor=#666666;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-26">
+          <mxGeometry x="50" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-28" value="&amp;lt;&amp;lt;orchestration&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Kubernetes&lt;/b&gt;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#e0e0e0;strokeColor=#666666;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-26">
+          <mxGeometry x="340" y="130" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-30" value="&amp;lt;&amp;lt;automation&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;CI/CD Pipeline&lt;/b&gt;&lt;br&gt;(Jenkins/GitHub Actions/&lt;br&gt;GitLab CI/CD)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#e0e0e0;strokeColor=#666666;" vertex="1" parent="PXlpdK_PIDM-b167QIi4-26">
+          <mxGeometry x="50" y="220" width="420" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-31" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#0D47A1;entryX=0.13;entryY=-0.007;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-2" target="PXlpdK_PIDM-b167QIi4-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="210" />
+              <mxPoint x="812" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-32" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#0D47A1;entryX=0.223;entryY=0.044;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-3" target="PXlpdK_PIDM-b167QIi4-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="190" />
+              <mxPoint x="850" y="190" />
+              <mxPoint x="850" y="255" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-33" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#0D47A1;entryX=0.801;entryY=0.001;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-4" target="PXlpdK_PIDM-b167QIi4-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-34" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#0D47A1;entryX=0.926;entryY=-0.005;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-5" target="PXlpdK_PIDM-b167QIi4-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="250" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1520" y="210" />
+              <mxPoint x="1130" y="210" />
+              <mxPoint x="1130" y="259" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-35" value="HTTPS/REST API" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#1B5E20;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-7" target="PXlpdK_PIDM-b167QIi4-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-37" value="TLS/Mongoose" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#E65100;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=0.579;exitY=1.015;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-9" target="PXlpdK_PIDM-b167QIi4-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-38" value="TLS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#E65100;entryX=0.927;entryY=0.029;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-10" target="PXlpdK_PIDM-b167QIi4-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-39" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=1;strokeColor=#880E4F;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-9" target="PXlpdK_PIDM-b167QIi4-14">
+          <mxGeometry x="-0.0833" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-40" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=1;strokeColor=#880E4F;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-9" target="PXlpdK_PIDM-b167QIi4-15">
+          <mxGeometry x="0.2061" y="-5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-41" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=1;strokeColor=#880E4F;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-9" target="PXlpdK_PIDM-b167QIi4-16">
+          <mxGeometry x="0.3374" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-42" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=1;strokeColor=#880E4F;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-9" target="PXlpdK_PIDM-b167QIi4-17">
+          <mxGeometry x="0.4461" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-43" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=1;strokeColor=#880E4F;entryX=0.105;entryY=0.419;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0;exitDx=340;exitDy=160;exitPerimeter=0;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-9" target="PXlpdK_PIDM-b167QIi4-18">
+          <mxGeometry x="-0.4538" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="730" y="640" />
+              <mxPoint x="730" y="1093" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-44" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=1;strokeColor=#880E4F;exitX=0;exitY=0;exitDx=340;exitDy=160;exitPerimeter=0;entryX=0.07;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-9" target="PXlpdK_PIDM-b167QIi4-19">
+          <mxGeometry x="-0.1696" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="640" />
+              <mxPoint x="910" y="1092" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-45" value="WebSocket" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=1;strokeColor=#880E4F;exitX=0;exitY=0;exitDx=340;exitDy=160;exitPerimeter=0;entryX=0.07;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1109.0999999999995" y="1091.9999999999998" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1070" y="640" />
+              <mxPoint x="1070" y="1092" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-47" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=classic;endFill=1;strokeWidth=1;strokeColor=#880E4F;exitX=1.006;exitY=0.566;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.07;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-9" target="PXlpdK_PIDM-b167QIi4-22">
+          <mxGeometry x="-0.7246" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="650" />
+              <mxPoint x="710" y="1202" />
+            </Array>
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-51" value="Deploy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeWidth=1;strokeColor=#424242;exitX=0.143;exitY=0.044;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-30" target="PXlpdK_PIDM-b167QIi4-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-52" value="Containerize" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeWidth=1;strokeColor=#424242;exitX=-0.003;exitY=0.627;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.001;entryY=0.177;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-27" target="PXlpdK_PIDM-b167QIi4-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="10" y="1220" />
+              <mxPoint x="10" y="281" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-53" value="Containerize" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeWidth=1;strokeColor=#424242;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-27" target="PXlpdK_PIDM-b167QIi4-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="1210" />
+              <mxPoint x="50" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-54" value="Containerize" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeWidth=1;strokeColor=#424242;exitX=0;exitY=0;exitDx=0;exitDy=60;exitPerimeter=0;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-27" target="PXlpdK_PIDM-b167QIi4-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="1230" />
+              <mxPoint x="50" y="1520" />
+              <mxPoint x="1560" y="1520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PXlpdK_PIDM-b167QIi4-55" value="Orchestrate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeWidth=1;strokeColor=#424242;entryX=0.867;entryY=1.031;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PXlpdK_PIDM-b167QIi4-28" target="PXlpdK_PIDM-b167QIi4-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
