@@ -1,339 +1,559 @@
-<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="5.0" version="21.0.0" etag="abc123" type="device">
-  <diagram name="Customer Manage Orders" id="manage-orders-seq">
-    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" math="0" shadow="0">
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="5.0" version="21.0.0" etag="fixed_version" type="device">
+  <diagram name="Customer Manage Orders" id="manage-orders-seq-fixed">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="2600" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         
-        <!-- Actors/Objects -->
+        <!-- Actors/Lifelines -->
         <mxCell id="customer" value="Customer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="50" y="40" width="30" height="60" as="geometry" />
         </mxCell>
         
         <mxCell id="ui" value="UI Interface" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="160" y="40" width="100" height="1500" as="geometry" />
+          <mxGeometry x="160" y="40" width="100" height="2500" as="geometry" />
         </mxCell>
         
         <mxCell id="orderController" value="Order Controller" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="320" y="40" width="100" height="1500" as="geometry" />
+          <mxGeometry x="320" y="40" width="100" height="2500" as="geometry" />
         </mxCell>
         
         <mxCell id="orderService" value="Order Service" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="480" y="40" width="100" height="1500" as="geometry" />
+          <mxGeometry x="480" y="40" width="100" height="2500" as="geometry" />
         </mxCell>
         
         <mxCell id="paymentGateway" value="Payment Gateway" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="640" y="40" width="100" height="1500" as="geometry" />
+          <mxGeometry x="640" y="40" width="100" height="2500" as="geometry" />
         </mxCell>
         
         <mxCell id="database" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="800" y="40" width="100" height="1500" as="geometry" />
+          <mxGeometry x="800" y="40" width="100" height="2500" as="geometry" />
         </mxCell>
         
         <mxCell id="notificationService" value="Notification Service" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="960" y="40" width="100" height="1500" as="geometry" />
+          <mxGeometry x="960" y="40" width="100" height="2500" as="geometry" />
         </mxCell>
         
         <!-- Place Order Flow -->
-        <mxCell id="msg1" value="1: Select medicines from cart" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;" edge="1" parent="1" source="customer" target="ui">
+        <mxCell id="refLogin" value="ref" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="130" width="850" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="refLoginLabel" value="Login Authentication" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="145" width="150" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg1" value="1: Select medicines" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;" edge="1" parent="1" source="customer" target="ui">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="85" y="130" as="sourcePoint" />
-            <mxPoint x="205" y="130" as="targetPoint" />
+            <mxPoint x="85" y="210" as="sourcePoint" />
+            <mxPoint x="205" y="210" as="targetPoint" />
+            <Array as="points">
+                <mxPoint x="120" y="210"/>
+            </Array>
           </mxGeometry>
         </mxCell>
         
         <mxCell id="msg2" value="2: Initiate checkout" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="customer" target="ui">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="85" y="160" as="sourcePoint" />
-            <mxPoint x="205" y="160" as="targetPoint" />
+            <mxPoint x="85" y="240" as="sourcePoint" />
+            <mxPoint x="205" y="240" as="targetPoint" />
+             <Array as="points">
+                <mxPoint x="120" y="240"/>
+            </Array>
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg3" value="3: placeOrder(cartItems, paymentMethod)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="msg3" value="3: Submit order details" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="ui" target="orderController">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="210" y="190" as="sourcePoint" />
-            <mxPoint x="370" y="190" as="targetPoint" />
+            <mxPoint x="210" y="270" as="sourcePoint" />
+            <mxPoint x="370" y="270" as="targetPoint" />
+            <Array as="points">
+                <mxPoint x="260" y="270"/>
+            </Array>
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg4" value="4: validateOrder(cartItems)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <!-- alt: Stock Check -->
+        <mxCell id="altStock" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="320" y="290" width="590" height="240" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="altStockAvailable" value="[Stock Available]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="330" y="300" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg4" value="4: Check if order is valid" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="orderController" target="orderService">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="370" y="220" as="sourcePoint" />
-            <mxPoint x="530" y="220" as="targetPoint" />
+            <mxPoint x="370" y="325" as="sourcePoint" />
+            <mxPoint x="530" y="325" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg5" value="5: checkStockAvailability()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="msg5" value="5: Check stock availability" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="orderService" target="database">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="250" as="sourcePoint" />
-            <mxPoint x="850" y="250" as="targetPoint" />
+            <mxPoint x="530" y="355" as="sourcePoint" />
+            <mxPoint x="850" y="355" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg6" value="6: Stock status" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+        <mxCell id="msg6" value="6: Stock confirmed" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="database" target="orderService">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="850" y="280" as="sourcePoint" />
-            <mxPoint x="530" y="280" as="targetPoint" />
+            <mxPoint x="850" y="385" as="sourcePoint" />
+            <mxPoint x="530" y="385" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg7" value="7: processPayment(amount, method)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="altDivider" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="410" width="590" height="8" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="altStockUnavailable" value="[Stock Unavailable]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="330" y="420" width="130" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg6b" value="6b: Stock unavailable error" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="orderService" target="orderController">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="310" as="sourcePoint" />
-            <mxPoint x="690" y="310" as="targetPoint" />
+            <mxPoint x="530" y="445" as="sourcePoint" />
+            <mxPoint x="370" y="445" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg8" value="8: Payment confirmation" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+        <mxCell id="msg6c" value="6c: Display error message" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="orderController" target="ui">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="690" y="340" as="sourcePoint" />
-            <mxPoint x="530" y="340" as="targetPoint" />
+            <mxPoint x="370" y="475" as="sourcePoint" />
+            <mxPoint x="210" y="475" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg9" value="9: createOrder(orderDetails)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="msg6d" value="6d: Return to cart" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="ui" target="customer">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="370" as="sourcePoint" />
-            <mxPoint x="850" y="370" as="targetPoint" />
+            <mxPoint x="210" y="505" as="sourcePoint" />
+            <mxPoint x="85" y="505" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg10" value="10: Order ID" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+        <!-- Payment Processing -->
+        <mxCell id="msg7" value="7: Process payment" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="orderService" target="paymentGateway">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="850" y="400" as="sourcePoint" />
-            <mxPoint x="530" y="400" as="targetPoint" />
+            <mxPoint x="530" y="550" as="sourcePoint" />
+            <mxPoint x="690" y="550" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg11" value="11: sendNotification(email/SMS, orderDetails)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <!-- alt: Payment Status -->
+        <mxCell id="altPayment" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="480" y="570" width="590" height="220" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="altPaymentSuccess" value="[Payment Successful]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="490" y="580" width="140" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg8" value="8: Payment confirmation" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="paymentGateway" target="orderService">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="430" as="sourcePoint" />
-            <mxPoint x="1010" y="430" as="targetPoint" />
+            <mxPoint x="690" y="605" as="sourcePoint" />
+            <mxPoint x="530" y="605" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg12" value="12: Order confirmation" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+        <mxCell id="msg9" value="9: Save new order" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="orderService" target="database">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="460" as="sourcePoint" />
-            <mxPoint x="370" y="460" as="targetPoint" />
+            <mxPoint x="530" y="635" as="sourcePoint" />
+            <mxPoint x="850" y="635" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg13" value="13: Display order confirmation" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+        <mxCell id="msg10" value="10: Order ID" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="database" target="orderService">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="370" y="490" as="sourcePoint" />
-            <mxPoint x="210" y="490" as="targetPoint" />
+            <mxPoint x="850" y="665" as="sourcePoint" />
+            <mxPoint x="530" y="665" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="altPaymentDivider" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="690" width="590" height="8" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="altPaymentFailed" value="[Payment Failed]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="490" y="700" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg8b" value="8b: Payment failed error" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="paymentGateway" target="orderService">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="725" as="sourcePoint" />
+            <mxPoint x="530" y="725" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg8c" value="8c: Display payment error" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="orderService" target="orderController">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="755" as="sourcePoint" />
+            <mxPoint x="370" y="755" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg11" value="11: Send email/SMS" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="orderService" target="notificationService">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="810" as="sourcePoint" />
+            <mxPoint x="1010" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg12" value="12: Order confirmation" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="orderService" target="orderController">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="840" as="sourcePoint" />
+            <mxPoint x="370" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg13" value="13: Display order confirmation" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="orderController" target="ui">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="870" as="sourcePoint" />
+            <mxPoint x="210" y="870" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
         <!-- View Order Status Flow -->
         <mxCell id="sep1" value="" style="line;strokeWidth=2;html=1;" vertex="1" parent="1">
-          <mxGeometry x="50" y="540" width="1010" height="10" as="geometry" />
+          <mxGeometry x="50" y="920" width="1010" height="10" as="geometry" />
         </mxCell>
         
         <mxCell id="label1" value="View Order Status" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="50" y="520" width="150" height="20" as="geometry" />
+          <mxGeometry x="50" y="900" width="150" height="20" as="geometry" />
         </mxCell>
         
-        <mxCell id="msg14" value="14: Request order status" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="refAuth" value="ref" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="940" width="850" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="refAuthLabel" value="Verify User Session" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="955" width="150" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg14" value="14: Request order status" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="customer" target="ui">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="85" y="570" as="sourcePoint" />
-            <mxPoint x="210" y="570" as="targetPoint" />
+            <mxPoint x="85" y="1020" as="sourcePoint" />
+            <mxPoint x="210" y="1020" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg15" value="15: getOrderStatus(orderId)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="msg15" value="15: Check status" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="ui" target="orderController">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="210" y="600" as="sourcePoint" />
-            <mxPoint x="370" y="600" as="targetPoint" />
+            <mxPoint x="210" y="1050" as="sourcePoint" />
+            <mxPoint x="370" y="1050" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg16" value="16: fetchOrderStatus(orderId)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="msg16" value="16: Get status from system" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="orderController" target="orderService">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="370" y="630" as="sourcePoint" />
-            <mxPoint x="530" y="630" as="targetPoint" />
+            <mxPoint x="370" y="1080" as="sourcePoint" />
+            <mxPoint x="530" y="1080" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg17" value="17: queryOrder(orderId)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <!-- opt: Order exists -->
+        <mxCell id="optOrder" value="opt" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="480" y="1100" width="590" height="180" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="optOrderLabel" value="[Order Found]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="490" y="1110" width="100" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg17" value="17: Find order record" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="orderService" target="database">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="660" as="sourcePoint" />
-            <mxPoint x="850" y="660" as="targetPoint" />
+            <mxPoint x="530" y="1140" as="sourcePoint" />
+            <mxPoint x="850" y="1140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg18" value="18: Order details (status, items, tracking)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+        <mxCell id="msg18" value="18: Order details (status, items, tracking)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="database" target="orderService">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="850" y="690" as="sourcePoint" />
-            <mxPoint x="530" y="690" as="targetPoint" />
+            <mxPoint x="850" y="1170" as="sourcePoint" />
+            <mxPoint x="530" y="1170" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg19" value="19: Order status data" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+        <mxCell id="msg19" value="19: Order status data" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="orderService" target="orderController">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="720" as="sourcePoint" />
-            <mxPoint x="370" y="720" as="targetPoint" />
+            <mxPoint x="530" y="1200" as="sourcePoint" />
+            <mxPoint x="370" y="1200" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg20" value="20: Display order status" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+        <mxCell id="msg20" value="20: Display order status" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="orderController" target="ui">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="370" y="750" as="sourcePoint" />
-            <mxPoint x="210" y="750" as="targetPoint" />
+            <mxPoint x="370" y="1230" as="sourcePoint" />
+            <mxPoint x="210" y="1230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg21" value="21: Show order details" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="ui" target="customer">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="1260" as="sourcePoint" />
+            <mxPoint x="85" y="1260" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
         <!-- View Order History Flow -->
         <mxCell id="sep2" value="" style="line;strokeWidth=2;html=1;" vertex="1" parent="1">
-          <mxGeometry x="50" y="800" width="1010" height="10" as="geometry" />
+          <mxGeometry x="50" y="1320" width="1010" height="10" as="geometry" />
         </mxCell>
         
         <mxCell id="label2" value="View Order History" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="50" y="780" width="150" height="20" as="geometry" />
+          <mxGeometry x="50" y="1300" width="150" height="20" as="geometry" />
         </mxCell>
         
-        <mxCell id="msg21" value="21: Request order history" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="msg22" value="22: Request order history" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="customer" target="ui">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="85" y="830" as="sourcePoint" />
-            <mxPoint x="210" y="830" as="targetPoint" />
+            <mxPoint x="85" y="1350" as="sourcePoint" />
+            <mxPoint x="210" y="1350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg22" value="22: getOrderHistory(customerId)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="msg23" value="23: Request past orders" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="ui" target="orderController">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="210" y="860" as="sourcePoint" />
-            <mxPoint x="370" y="860" as="targetPoint" />
+            <mxPoint x="210" y="1380" as="sourcePoint" />
+            <mxPoint x="370" y="1380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg23" value="23: fetchAllOrders(customerId)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="msg24" value="24: Find all orders" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="orderController" target="orderService">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="370" y="890" as="sourcePoint" />
-            <mxPoint x="530" y="890" as="targetPoint" />
+            <mxPoint x="370" y="1410" as="sourcePoint" />
+            <mxPoint x="530" y="1410" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg24" value="24: queryOrderHistory(customerId)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="msg25" value="25: Fetch history from database" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="orderService" target="database">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="920" as="sourcePoint" />
-            <mxPoint x="850" y="920" as="targetPoint" />
+            <mxPoint x="530" y="1440" as="sourcePoint" />
+            <mxPoint x="850" y="1440" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg25" value="25: List of orders" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+        <!-- loop: For each order -->
+        <mxCell id="loopOrders" value="loop" style="shape=umlFrame;whiteSpace=wrap;html=1;width=60;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="800" y="1460" width="270" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="loopOrdersLabel" value="[For each order]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="810" y="1470" width="110" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg26" value="26: Get order summary" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="850" y="950" as="sourcePoint" />
-            <mxPoint x="530" y="950" as="targetPoint" />
+            <mxPoint x="850" y="1510" as="sourcePoint" />
+            <mxPoint x="850" y="1540" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="920" y="1510" />
+              <mxPoint x="920" y="1540" />
+            </Array>
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg26" value="26: Order history data" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+        <mxCell id="msg27" value="27: List of orders" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="database" target="orderService">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="980" as="sourcePoint" />
-            <mxPoint x="370" y="980" as="targetPoint" />
+            <mxPoint x="850" y="1600" as="sourcePoint" />
+            <mxPoint x="530" y="1600" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg27" value="27: Display order history" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+        <mxCell id="msg28" value="28: Order history data" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="orderService" target="orderController">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="370" y="1010" as="sourcePoint" />
-            <mxPoint x="210" y="1010" as="targetPoint" />
+            <mxPoint x="530" y="1630" as="sourcePoint" />
+            <mxPoint x="370" y="1630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg29" value="29: Display order history" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="orderController" target="ui">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="1660" as="sourcePoint" />
+            <mxPoint x="210" y="1660" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
         <!-- Download Invoice Flow -->
         <mxCell id="sep3" value="" style="line;strokeWidth=2;html=1;" vertex="1" parent="1">
-          <mxGeometry x="50" y="1060" width="1010" height="10" as="geometry" />
+          <mxGeometry x="50" y="1710" width="1010" height="10" as="geometry" />
         </mxCell>
         
         <mxCell id="label3" value="Download Invoice" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="50" y="1040" width="150" height="20" as="geometry" />
+          <mxGeometry x="50" y="1690" width="150" height="20" as="geometry" />
         </mxCell>
         
-        <mxCell id="msg28" value="28: Request invoice download" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="msg30" value="30: Request invoice download" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="customer" target="ui">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="85" y="1090" as="sourcePoint" />
-            <mxPoint x="210" y="1090" as="targetPoint" />
+            <mxPoint x="85" y="1740" as="sourcePoint" />
+            <mxPoint x="210" y="1740" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg29" value="29: downloadInvoice(orderId)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="msg31" value="31: Request invoice file" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="ui" target="orderController">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="210" y="1120" as="sourcePoint" />
-            <mxPoint x="370" y="1120" as="targetPoint" />
+            <mxPoint x="210" y="1770" as="sourcePoint" />
+            <mxPoint x="370" y="1770" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg30" value="30: generateInvoicePDF(orderId)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <!-- alt: Invoice generation -->
+        <mxCell id="altInvoice" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="320" y="1790" width="750" height="290" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="altInvoiceSuccess" value="[Order Delivered/Completed]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="330" y="1800" width="180" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg32" value="32: Create PDF invoice" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="orderController" target="orderService">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="370" y="1150" as="sourcePoint" />
-            <mxPoint x="530" y="1150" as="targetPoint" />
+            <mxPoint x="370" y="1830" as="sourcePoint" />
+            <mxPoint x="530" y="1830" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg31" value="31: getOrderDetails(orderId)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="msg33" value="33: Get order details" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="orderService" target="database">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="1180" as="sourcePoint" />
-            <mxPoint x="850" y="1180" as="targetPoint" />
+            <mxPoint x="530" y="1860" as="sourcePoint" />
+            <mxPoint x="850" y="1860" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg32" value="32: Order details" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+        <mxCell id="msg34" value="34: Order & payment details" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="database" target="orderService">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="850" y="1210" as="sourcePoint" />
-            <mxPoint x="530" y="1210" as="targetPoint" />
+            <mxPoint x="850" y="1890" as="sourcePoint" />
+            <mxPoint x="530" y="1890" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg33" value="33: PDF file" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+        <mxCell id="msg35" value="35: PDF invoice generated" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="orderService" target="orderController">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="1240" as="sourcePoint" />
-            <mxPoint x="370" y="1240" as="targetPoint" />
+            <mxPoint x="530" y="1920" as="sourcePoint" />
+            <mxPoint x="370" y="1920" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg34" value="34: Download PDF" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+        <mxCell id="msg36" value="36: Download PDF" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="orderController" target="ui">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="370" y="1270" as="sourcePoint" />
-            <mxPoint x="210" y="1270" as="targetPoint" />
+            <mxPoint x="370" y="1950" as="sourcePoint" />
+            <mxPoint x="210" y="1950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="altInvoiceDivider" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="1980" width="750" height="8" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="altInvoiceError" value="[Order Not Completed]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="330" y="1990" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg37" value="37: Invoice not available" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="orderController" target="ui">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="2020" as="sourcePoint" />
+            <mxPoint x="210" y="2020" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg38" value="38: Show error message" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="ui" target="customer">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="2050" as="sourcePoint" />
+            <mxPoint x="85" y="2050" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
         <!-- Order Status Update Notification -->
         <mxCell id="sep4" value="" style="line;strokeWidth=2;html=1;" vertex="1" parent="1">
-          <mxGeometry x="50" y="1320" width="1010" height="10" as="geometry" />
+          <mxGeometry x="50" y="2110" width="1010" height="10" as="geometry" />
         </mxCell>
         
         <mxCell id="label4" value="Order Status Update (System Initiated)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="50" y="1300" width="250" height="20" as="geometry" />
+          <mxGeometry x="50" y="2090" width="250" height="20" as="geometry" />
         </mxCell>
         
-        <mxCell id="msg35" value="35: updateOrderStatus(orderId, newStatus)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="msg39" value="39: Update order status" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="orderService" target="database">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="1350" as="sourcePoint" />
-            <mxPoint x="850" y="1350" as="targetPoint" />
+            <mxPoint x="530" y="2140" as="sourcePoint" />
+            <mxPoint x="850" y="2140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg36" value="36: Status updated" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+        <mxCell id="msg40" value="40: Status updated" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="database" target="orderService">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="850" y="1380" as="sourcePoint" />
-            <mxPoint x="530" y="1380" as="targetPoint" />
+            <mxPoint x="850" y="2170" as="sourcePoint" />
+            <mxPoint x="530" y="2170" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg37" value="37: triggerNotification(customerId, statusUpdate)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <!-- alt: Notification type -->
+        <mxCell id="altNotification" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="480" y="2190" width="590" height="340" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="altNotifEmail" value="[Email notification enabled]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="490" y="2200" width="170" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg41" value="41: Send email alert" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="orderService" target="notificationService">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="1410" as="sourcePoint" />
-            <mxPoint x="1010" y="1410" as="targetPoint" />
+            <mxPoint x="530" y="2230" as="sourcePoint" />
+            <mxPoint x="1010" y="2230" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
-        <mxCell id="msg38" value="38: Send email/SMS notification" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="msg42" value="42: Email sent" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="notificationService" target="orderService">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1010" y="1440" as="sourcePoint" />
-            <mxPoint x="85" y="1440" as="targetPoint" />
+            <mxPoint x="1010" y="2260" as="sourcePoint" />
+            <mxPoint x="530" y="2260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="altNotifDivider1" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="2285" width="590" height="8" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="altNotifSMS" value="[SMS notification enabled]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="490" y="2295" width="160" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg43" value="43: Send SMS alert" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="orderService" target="notificationService">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="2325" as="sourcePoint" />
+            <mxPoint x="1010" y="2325" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg44" value="44: SMS sent" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="notificationService" target="orderService">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1010" y="2355" as="sourcePoint" />
+            <mxPoint x="530" y="2355" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="altNotifDivider2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="2380" width="590" height="8" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="altNotifBoth" value="[Both enabled]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="490" y="2390" width="110" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg45" value="45: Send both alerts" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="orderService" target="notificationService">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="2420" as="sourcePoint" />
+            <mxPoint x="1010" y="2420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg46" value="46: Notifications sent" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="notificationService" target="orderService">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1010" y="2450" as="sourcePoint" />
+            <mxPoint x="530" y="2450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg47" value="47: Deliver notification" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="notificationService" target="customer">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1010" y="2550" as="sourcePoint" />
+            <mxPoint x="85" y="2550" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         
