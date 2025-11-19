@@ -1,0 +1,98 @@
+
+Most common cause of mistakes: ye diagram with respect to user activity banatay han..... system ka response kabhi bhi nahi likhtay
+
+1- diagram number 1
+
+
+Validate stock availability (Remove it)
+Show out of stock message (Remove this) ..... instead show an arrow which recontinues the process via diamond shape .... back to browse medicines
+change process payment with "click process payment"
+remove show payment failed and ....... instead show an arrow which recontinues the process via diamond shape.... back to process payment
+create order must be replaced with check order status
+remove Send order confirmation notification
+remove Order Status → Processing
+remove Order Status → Packed
+remove Order Status → Ready for delivery
+remove Deliver order
+remove Order Status → Delivered
+remove Send delivery notification
+change cancle request with cancle order
+change Status <= Processing? with Status == Processing?
+remove Cancellation not allowed and ....... instead show an arrow which recontinues the process via diamond shape .... back to cancle request.
+remove intiate refnd
+remove cancellation confirmation
+
+
+
+
+2- diagram number 2
+
+
+remove load orders list
+remove show no orders found and instead make it a single path activity.... after open orders management page opening next activity must be apply filters
+remove display order details
+remove Monitor status updates and connect the no arrow directly with the diamond shape at bottom
+under right side of approve cancellation (i.e. reject side) remove the notify customer
+remove the validate allowed 
+remove allowed? and only keep the yes portion after it
+remove initiate refund process
+remove Send cancellation notification
+remove Update dashboard stats
+at end either keep "generate orders report" or "download or mprint eport"
+
+
+3- diagram number 3
+
+remove load appointment requests
+remove the decision diamond "Requests available" and after open appointments page directly show the Display list of appointment requests activity
+remove both notify customer under appointment acceptance
+conduct consultation k nichay sirf aik hi rasta banao.... add prescription ka
+remove Update appointment status -> Completed
+remove Record appointment in history
+
+4- diagram number 4
+
+remove load inventory list
+inventory available ka diamond remove kero.... isay aik rasta banao.... yes wala
+remove display medicines list
+validate file format remove kero
+remove Upload and process inventory
+remove Show success message
+remove Show file error
+file valid ye k agay monitor logs ki activity likho
+file valid no say aik arrow nikalo jo recontinue keray wapis select excel file ki taraf
+update stock quantity k nichay sab say pehlay select medicine item likho
+validate input remove kero
+remove Update stock in database
+remove Send Low Stock Notification
+remove Low stock triggered?
+remove Show update success
+remove Show validation error
+delete item is ok.... disable is not ok
+remove update medicine status
+remove show success message
+
+5- diagram number 5
+
+change login as super admin with login
+remove branch list
+remove branches available decision diamond.... only proceed with yes path
+remove validate fields
+remove Show validation error
+remove Show success message
+change save updates with "Save"
+remove show update success
+remove attempt delete
+remove delete possible decision diamond
+remove "Remove branch"
+remove "Show success message"
+remove "Show dependency restriction"
+remove "Show assignment success"
+
+6- diagram number 6
+
+remove validate credentials
+credentials valid no k case may recontinue
+credentials valid yes k case may direct 2FA required?
+remove check if 2fa enabled
+remove s
