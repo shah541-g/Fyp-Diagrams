@@ -1,0 +1,187 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="5.0" version="22.0.0" etag="xxx" type="device">
+  <diagram id="collaboration-diagram" name="Doctor Logout Collaboration">
+    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Doctor Actor -->
+        <mxCell id="doctor" value="Doctor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="80" y="380" width="40" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- Frontend UI -->
+        <mxCell id="frontendUI" value="&lt;b&gt;:Frontend UI&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="280" y="360" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Backend API -->
+        <mxCell id="backendAPI" value="&lt;b&gt;:Backend API&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="540" y="360" width="140" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Database -->
+        <mxCell id="database" value="&lt;b&gt;:Database&lt;/b&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="800" y="350" width="80" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- Message 1: Click 'Logout' -->
+        <mxCell id="msg1" value="1: Click &#39;Logout&#39;" style="endArrow=classic;html=1;rounded=0;" parent="1" source="doctor" target="frontendUI" edge="1">
+          <mxGeometry x="-0.1" y="12" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint"/>
+            <mxPoint x="450" y="400" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Message 2: Show confirmation dialog (optional) -->
+        <mxCell id="msg2" value="2: Show confirmation dialog (optional)" style="endArrow=classic;html=1;rounded=0;dashed=1;" parent="1" source="frontendUI" target="doctor" edge="1">
+          <mxGeometry x="-0.15" y="-12" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint"/>
+            <mxPoint x="450" y="400" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Message 3: Confirm logout -->
+        <mxCell id="msg3" value="3: Confirm logout" style="endArrow=classic;html=1;rounded=0;" parent="1" source="doctor" target="frontendUI" edge="1">
+          <mxGeometry x="-0.1" y="12" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint"/>
+            <mxPoint x="450" y="400" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Message 4: Retrieve auth token from storage -->
+        <mxCell id="msg4" value="4: Retrieve auth token from storage" style="endArrow=classic;html=1;rounded=0;" parent="1" source="frontendUI" target="frontendUI" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="360" as="sourcePoint"/>
+            <mxPoint x="340" y="360" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="340" y="310"/>
+              <mxPoint x="430" y="310"/>
+              <mxPoint x="430" y="375"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Message 5: POST /api/doctor/logout -->
+        <mxCell id="msg5" value="5: POST /api/doctor/logout" style="endArrow=classic;html=1;rounded=0;" parent="1" source="frontendUI" target="backendAPI" edge="1">
+          <mxGeometry x="-0.15" y="15" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint"/>
+            <mxPoint x="450" y="400" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Message 6: Verify JWT token -->
+        <mxCell id="msg6" value="6: Verify JWT token" style="endArrow=classic;html=1;rounded=0;" parent="1" source="backendAPI" target="backendAPI" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="610" y="360" as="sourcePoint"/>
+            <mxPoint x="610" y="360" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="610" y="310"/>
+              <mxPoint x="720" y="310"/>
+              <mxPoint x="720" y="375"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Message 7: Invalidate/blacklist token -->
+        <mxCell id="msg7" value="7: Invalidate/blacklist token" style="endArrow=classic;html=1;rounded=0;" parent="1" source="backendAPI" target="database" edge="1">
+          <mxGeometry x="-0.1" y="15" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint"/>
+            <mxPoint x="450" y="400" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Message 8: Token blacklisted -->
+        <mxCell id="msg8" value="8: Token blacklisted" style="endArrow=classic;html=1;rounded=0;dashed=1;" parent="1" source="database" target="backendAPI" edge="1">
+          <mxGeometry x="-0.1" y="-15" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint"/>
+            <mxPoint x="450" y="400" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Message 9: Log logout activity (user_id, timestamp, IP) -->
+        <mxCell id="msg9" value="9: Log logout activity&#xa;(user_id, timestamp, IP)" style="endArrow=classic;html=1;rounded=0;" parent="1" source="backendAPI" target="database" edge="1">
+          <mxGeometry x="-0.1" y="15" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint"/>
+            <mxPoint x="450" y="400" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Message 10: Activity logged -->
+        <mxCell id="msg10" value="10: Activity logged" style="endArrow=classic;html=1;rounded=0;dashed=1;" parent="1" source="database" target="backendAPI" edge="1">
+          <mxGeometry x="-0.1" y="-15" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint"/>
+            <mxPoint x="450" y="400" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Message 11: Return logout success -->
+        <mxCell id="msg11" value="11: Return logout success" style="endArrow=classic;html=1;rounded=0;dashed=1;" parent="1" source="backendAPI" target="frontendUI" edge="1">
+          <mxGeometry x="-0.15" y="-15" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint"/>
+            <mxPoint x="450" y="400" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Message 12: Clear token from local storage -->
+        <mxCell id="msg12" value="12: Clear token from local storage" style="endArrow=classic;html=1;rounded=0;" parent="1" source="frontendUI" target="frontendUI" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="420" as="sourcePoint"/>
+            <mxPoint x="340" y="420" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="340" y="470"/>
+              <mxPoint x="450" y="470"/>
+              <mxPoint x="450" y="405"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Message 13: Redirect to login page -->
+        <mxCell id="msg13" value="13: Redirect to login page" style="endArrow=classic;html=1;rounded=0;dashed=1;" parent="1" source="frontendUI" target="doctor" edge="1">
+          <mxGeometry x="-0.15" y="-12" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint"/>
+            <mxPoint x="450" y="400" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Flow sequence visualization -->
+        <mxCell id="flow1" value="&lt;b&gt;User Interaction&lt;/b&gt;&#xa;1 → 2 → 3" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="80" y="200" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow2" value="&lt;b&gt;Frontend Processing&lt;/b&gt;&#xa;4 → 5" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="280" y="200" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow3" value="&lt;b&gt;Backend Processing&lt;/b&gt;&#xa;6 → 7 → 9 → 11" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="480" y="200" width="180" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow4" value="&lt;b&gt;Cleanup &amp; Redirect&lt;/b&gt;&#xa;12 → 13" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="280" y="520" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Security Note -->
+        <mxCell id="security" value="&lt;b&gt;Security Measures:&lt;/b&gt;&#xa;• JWT token verification&#xa;• Token blacklisting/invalidation&#xa;• Activity logging (audit trail)&#xa;• Local storage cleared&#xa;• Session termination" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="700" y="520" width="240" height="120" as="geometry"/>
+        </mxCell>
+        
+        <!-- Legend -->
+        <mxCell id="legend" value="&lt;b&gt;Collaboration Diagram - Doctor Logout&lt;/b&gt;&#xa;&#xa;Messages show sequence numbers&#xa;Solid lines = requests&#xa;Dashed lines = responses&#xa;Self-calls = internal processing&#xa;&#xa;Flow: User → Frontend → Backend → Database" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="360" height="140" as="geometry"/>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

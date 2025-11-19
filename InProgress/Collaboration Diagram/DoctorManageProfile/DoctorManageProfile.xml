@@ -1,0 +1,169 @@
+<mxfile host="Electron" modified="${now}" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="random_etag_123" version="21.6.8" type="device">
+  <diagram id="ManageProfileCollab" name="${diagramName}">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ================= ACTORS & OBJECTS ================= -->
+        
+        <!-- Doctor Actor -->
+        <mxCell id="actor_doctor" value="Doctor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="80" y="300" width="30" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Interface: App Screen -->
+        <mxCell id="obj_screen" value=":App Screen" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="320" y="310" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Logic: System -->
+        <mxCell id="obj_system" value=":System" style="html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="640" y="310" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Database: Records -->
+        <mxCell id="obj_db" value=":Database" style="html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="960" y="310" width="120" height="40" as="geometry" />
+        </mxCell>
+
+
+        <!-- ================= LINKS & ASSOCIATIONS ================= -->
+
+        <!-- Link: Doctor - App Screen -->
+        <mxCell id="link_doc_screen" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="actor_doctor" target="obj_screen">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Link: App Screen - System -->
+        <mxCell id="link_screen_sys" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="obj_screen" target="obj_system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Link: System - Database -->
+        <mxCell id="link_sys_db" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="obj_system" target="obj_db">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Self Link: System (Validation) -->
+        <mxCell id="link_sys_self" value="" style="endArrow=none;html=1;rounded=0;curved=1;" edge="1" parent="1" source="obj_system" target="obj_system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="350" as="sourcePoint" />
+            <mxPoint x="750" y="420" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="700" y="390" />
+              <mxPoint x="760" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ================= MESSAGES ================= -->
+
+        <!-- Messages: Doctor -> App Screen -->
+        <!-- 1. Open "Manage Profile" -->
+        <mxCell id="msg_1" value="1: Open &quot;Manage Profile&quot; →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_doc_screen">
+          <mxGeometry x="-0.5" y="-20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <!-- 6. Edit info & click Save -->
+        <mxCell id="msg_6" value="6: Edit info &amp; click Save →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_doc_screen">
+          <mxGeometry x="-0.2" y="-40" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <!-- 12. Show "Profile Updated" -->
+        <mxCell id="msg_12" value="12: Show &quot;Profile Updated&quot; ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_doc_screen">
+          <mxGeometry x="0.2" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <!-- 14. Show Error Message -->
+        <mxCell id="msg_14" value="14: [Error] Show Error Message ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontColor=#B91C1C;" vertex="1" connectable="0" parent="link_doc_screen">
+          <mxGeometry x="0.2" y="40" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+
+        <!-- Messages: App Screen -> System -->
+        <!-- 2. Fetch existing details -->
+        <mxCell id="msg_2" value="2: Fetch existing details →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_screen_sys">
+          <mxGeometry x="-0.6" y="-20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <!-- 5. Show Profile Form -->
+        <mxCell id="msg_5" value="5: Show Profile Form ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_screen_sys">
+          <mxGeometry x="-0.6" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <!-- 7. Send updated data -->
+        <mxCell id="msg_7" value="7: Send updated data →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_screen_sys">
+          <mxGeometry x="0.4" y="-20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <!-- 11. Update Successful -->
+        <mxCell id="msg_11" value="11: Update Successful ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_screen_sys">
+          <mxGeometry x="0.4" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <!-- 13. Return Error -->
+        <mxCell id="msg_13" value="13: [Error] Return Error ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontColor=#B91C1C;" vertex="1" connectable="0" parent="link_screen_sys">
+          <mxGeometry x="0.4" y="40" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+
+        <!-- Messages: System -> Database -->
+        <!-- 3. Read record -->
+        <mxCell id="msg_3" value="3: Read record →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_sys_db">
+          <mxGeometry x="-0.5" y="-20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <!-- 4. Return Name, Fee... -->
+        <mxCell id="msg_4" value="4: Return Details ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_sys_db">
+          <mxGeometry x="-0.5" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <!-- 9. Save updates -->
+        <mxCell id="msg_9" value="9: Save updates →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_sys_db">
+          <mxGeometry x="0.5" y="-20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <!-- 10. Saved successfully -->
+        <mxCell id="msg_10" value="10: Saved successfully ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_sys_db">
+          <mxGeometry x="0.5" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+
+        <!-- Message: Self Validation -->
+        <!-- 8. Check data rules -->
+        <mxCell id="msg_8" value="8: Check data rules" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="link_sys_self">
+          <mxGeometry x="0.5" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
