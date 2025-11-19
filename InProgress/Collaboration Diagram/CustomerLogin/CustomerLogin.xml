@@ -1,0 +1,149 @@
+<mxfile host="Electron" modified="${now}" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" version="21.6.8" type="device">
+  <diagram id="LoginProcessCollab" name="${diagramName}">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ================= ACTORS & OBJECTS ================= -->
+        
+        <!-- Customer Actor -->
+        <mxCell id="actor_customer" value="Customer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="30" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- UI: Login UI -->
+        <mxCell id="obj_login_ui" value=":Login UI" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="240" y="310" width="110" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Control: Auth Controller -->
+        <mxCell id="obj_auth_ctrl" value=":Auth Controller" style="html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="520" y="310" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Service: Auth Service -->
+        <mxCell id="obj_auth_svc" value=":Auth Service" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="800" y="310" width="110" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Database -->
+        <mxCell id="obj_db" value=":Database" style="html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1080" y="310" width="110" height="40" as="geometry" />
+        </mxCell>
+
+
+        <!-- ================= LINKS ================= -->
+
+        <!-- Link: Customer - Login UI -->
+        <mxCell id="link_cust_ui" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="actor_customer" target="obj_login_ui">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="330" as="sourcePoint" />
+            <mxPoint x="200" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Link: Login UI - Auth Controller -->
+        <mxCell id="link_ui_ctrl" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="obj_login_ui" target="obj_auth_ctrl">
+           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Link: Auth Controller - Auth Service -->
+        <mxCell id="link_ctrl_svc" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="obj_auth_ctrl" target="obj_auth_svc">
+           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Link: Auth Service - Database -->
+        <mxCell id="link_svc_db" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="obj_auth_svc" target="obj_db">
+           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Link: Auth Service Self -->
+        <mxCell id="link_svc_self" value="" style="endArrow=none;html=1;rounded=0;curved=1;" edge="1" parent="1" source="obj_auth_svc" target="obj_auth_svc">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="855" y="350" as="sourcePoint" />
+            <mxPoint x="910" y="400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="855" y="410" />
+              <mxPoint x="910" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+
+        <!-- ================= MESSAGES ================= -->
+
+        <!-- Messages: Customer <-> Login UI -->
+        <mxCell id="msg_1" value="1: Access login page →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_cust_ui">
+          <mxGeometry x="-0.8" y="-30" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="msg_2" value="2: Display login form ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_cust_ui">
+          <mxGeometry x="-0.6" y="20" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="msg_3" value="3: Enter email &amp; password →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_cust_ui">
+          <mxGeometry x="-0.2" y="-30" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="msg_7" value="7: [Invalid] Display error msg ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontColor=#B91C1C;" vertex="1" connectable="0" parent="link_cust_ui">
+          <mxGeometry x="0.4" y="20" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="msg_22" value="22: Store token &amp; redirect ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_cust_ui">
+          <mxGeometry x="0.8" y="40" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- Messages: Login UI <-> Auth Controller -->
+        <mxCell id="msg_4" value="4: Submit login request →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_ui_ctrl">
+          <mxGeometry x="-0.8" y="-20" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="msg_6" value="6: Return validation error ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontColor=#B91C1C;" vertex="1" connectable="0" parent="link_ui_ctrl">
+          <mxGeometry x="-0.4" y="20" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="msg_14" value="14: Return error response ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontColor=#B91C1C;" vertex="1" connectable="0" parent="link_ui_ctrl">
+          <mxGeometry x="0.2" y="20" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="msg_21" value="21: Return success response ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_ui_ctrl">
+          <mxGeometry x="0.8" y="40" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- Messages: Auth Controller <-> Auth Service -->
+        <mxCell id="msg_5" value="5: Authenticate(email, pass) →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_ctrl_svc">
+          <mxGeometry x="-0.8" y="-20" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="msg_11" value="11: Throw InvalidCreds ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontColor=#B91C1C;" vertex="1" connectable="0" parent="link_ctrl_svc">
+          <mxGeometry x="-0.3" y="20" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="msg_13" value="13: Throw InvalidCreds ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontColor=#B91C1C;" vertex="1" connectable="0" parent="link_ctrl_svc">
+          <mxGeometry x="0.2" y="35" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="msg_19" value="19/20: Suspended/Blocked Error ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontColor=#B91C1C;" vertex="1" connectable="0" parent="link_ctrl_svc">
+          <mxGeometry x="0.6" y="50" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="msg_17" value="17: Return auth token &amp; profile ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_ctrl_svc">
+          <mxGeometry x="0.8" y="65" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- Messages: Auth Service <-> Database -->
+        <mxCell id="msg_8" value="8: Query customer by email →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_svc_db">
+          <mxGeometry x="-0.5" y="-20" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="msg_9" value="9: [Found] Return record ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_svc_db">
+          <mxGeometry x="-0.5" y="20" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="msg_10" value="10: [Not Found] Return null ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="link_svc_db">
+          <mxGeometry x="0.5" y="40" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- Self Messages: Auth Service -->
+        <mxCell id="msg_12" value="12: Verify hash" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="link_svc_self">
+          <mxGeometry x="-0.5" y="15" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="msg_15" value="15: Check status" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="link_svc_self">
+          <mxGeometry x="0" y="30" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="msg_16" value="16: Gen Token" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="link_svc_self">
+          <mxGeometry x="0.5" y="45" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

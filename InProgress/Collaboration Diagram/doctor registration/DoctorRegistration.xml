@@ -1,0 +1,225 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Collaboration Diagram" id="collab_diagram_doctor">
+    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Doctor Object -->
+        <mxCell id="doctor" value="Doctor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="450" width="40" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Registration UI Object -->
+        <mxCell id="regui" value="Registration UI" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="280" y="460" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Backend API Object -->
+        <mxCell id="backend" value="Backend API" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="580" y="460" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Database Object -->
+        <mxCell id="database" value="Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="880" y="140" width="60" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- File Storage Object -->
+        <mxCell id="filestorage" value="File Storage" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="880" y="460" width="60" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Admin System Object -->
+        <mxCell id="admin" value="Admin System" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="460" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Messages 1-6: Doctor to Registration UI -->
+        <mxCell id="msg1" value="" style="endArrow=open;endFill=0;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.15;entryDx=0;entryDy=0;" edge="1" parent="1" source="doctor" target="regui">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="550" as="sourcePoint" />
+            <mxPoint x="750" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg1label" value="1: Access registration page" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="125" y="435" width="150" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg2" value="" style="endArrow=open;endFill=0;html=1;dashed=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.375;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="regui" target="doctor">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="550" as="sourcePoint" />
+            <mxPoint x="750" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg2label" value="2: Display registration form" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="125" y="465" width="150" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg3" value="" style="endArrow=open;endFill=0;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;" edge="1" parent="1" source="doctor" target="regui">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="550" as="sourcePoint" />
+            <mxPoint x="750" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg3label" value="3: Fill personal details" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="135" y="495" width="130" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg4" value="" style="endArrow=open;endFill=0;html=1;exitX=1;exitY=0.625;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="doctor" target="regui">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="550" as="sourcePoint" />
+            <mxPoint x="750" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg4label" value="4: Fill professional details" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="125" y="525" width="150" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg5" value="" style="endArrow=open;endFill=0;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.65;entryDx=0;entryDy=0;" edge="1" parent="1" source="doctor" target="regui">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="550" as="sourcePoint" />
+            <mxPoint x="750" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg5label" value="5: Upload certificates" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="140" y="555" width="130" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg6" value="" style="endArrow=open;endFill=0;html=1;exitX=1;exitY=0.875;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.85;entryDx=0;entryDy=0;" edge="1" parent="1" source="doctor" target="regui">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="550" as="sourcePoint" />
+            <mxPoint x="750" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg6label" value="6: Submit registration" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="140" y="585" width="130" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Message 7: Registration UI to Backend API -->
+        <mxCell id="msg7" value="" style="endArrow=open;endFill=0;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="regui" target="backend">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="550" as="sourcePoint" />
+            <mxPoint x="750" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg7label" value="7: Validate input data" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="435" y="445" width="120" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Message 8-9: Backend API to File Storage -->
+        <mxCell id="msg8" value="" style="endArrow=open;endFill=0;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="backend" target="filestorage">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="550" as="sourcePoint" />
+            <mxPoint x="750" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg8label" value="8: Upload files to storage" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="735" y="445" width="140" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg9" value="" style="endArrow=open;endFill=0;html=1;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="filestorage" target="backend">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="550" as="sourcePoint" />
+            <mxPoint x="750" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg9label" value="9: Return file URLs" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="755" y="495" width="110" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Message 10: Backend API (Hash password) -->
+        <mxCell id="msg10" value="" style="endArrow=open;endFill=0;html=1;startArrow=none;startFill=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="520" as="sourcePoint" />
+            <mxPoint x="650" y="560" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="680" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg10label" value="10: Hash password" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="680" y="525" width="110" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Message 11-12: Backend API to Database -->
+        <mxCell id="msg11" value="" style="endArrow=open;endFill=0;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="backend" target="database">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="550" as="sourcePoint" />
+            <mxPoint x="750" y="500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="685" y="340" />
+              <mxPoint x="910" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg11label" value="11: Save doctor registration&#xa;(status: pending)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="720" y="290" width="150" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg12" value="" style="endArrow=open;endFill=0;html=1;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="database" target="backend">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="550" as="sourcePoint" />
+            <mxPoint x="750" y="500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="910" y="380" />
+              <mxPoint x="720" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg12label" value="12: Confirmation" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="775" y="355" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Message 13: Backend API to Admin System -->
+        <mxCell id="msg13" value="" style="endArrow=open;endFill=0;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="backend" target="admin">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="550" as="sourcePoint" />
+            <mxPoint x="750" y="500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1080" y="505" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg13label" value="13: Notify admin of&#xa;new registration" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="950" y="495" width="110" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Message 14-15: Backend API to Registration UI to Doctor -->
+        <mxCell id="msg14" value="" style="endArrow=open;endFill=0;html=1;dashed=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="backend" target="regui">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="550" as="sourcePoint" />
+            <mxPoint x="750" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg14label" value="14: Registration successful&#xa;(status: pending approval)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="415" y="535" width="160" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg15" value="" style="endArrow=open;endFill=0;html=1;dashed=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="regui" target="doctor">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="550" as="sourcePoint" />
+            <mxPoint x="750" y="500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg15label" value="15: Show success message &amp;&#xa;application tracking info" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="135" y="605" width="160" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Title -->
+        <mxCell id="title" value="Doctor Registration Flow - Collaboration Diagram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="560" y="30" width="480" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Note -->
+        <mxCell id="note" value="Note: Doctor can track application&#xa;status (pending, processing,&#xa;approved, rejected) and view&#xa;admin comments if rejected" style="text;html=1;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="680" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
