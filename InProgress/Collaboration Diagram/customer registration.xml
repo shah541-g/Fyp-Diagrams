@@ -1,0 +1,186 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Collaboration Diagram" id="collab-diagram">
+    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Customer Object -->
+        <mxCell id="customer" value="Customer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="400" width="40" height="80" />
+        </mxCell>
+        
+        <!-- Registration UI Object -->
+        <mxCell id="regui" value=":Registration UI" style="html=1;rounded=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="240" y="380" width="140" height="60" />
+        </mxCell>
+        
+        <!-- Auth Controller Object -->
+        <mxCell id="authctrl" value=":Auth Controller" style="html=1;rounded=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="520" y="380" width="140" height="60" />
+        </mxCell>
+        
+        <!-- Validation Service Object -->
+        <mxCell id="validsvc" value=":Validation Service" style="html=1;rounded=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="800" y="300" width="140" height="60" />
+        </mxCell>
+        
+        <!-- Database Object -->
+        <mxCell id="database" value=":Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="840" y="480" width="90" height="80" />
+        </mxCell>
+        
+        <!-- Email Service Object -->
+        <mxCell id="emailsvc" value=":Email Service" style="html=1;rounded=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="380" width="140" height="60" />
+        </mxCell>
+        
+        <!-- Link 1: Customer to Registration UI -->
+        <mxCell id="link1" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="customer" target="regui">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg1" value="1: Open Registration Page" style="edgeLabel;html=1;align=center;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link1">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint x="5" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg2" value="2: Display Registration Form" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link1">
+          <mxGeometry x="-0.1" y="15" relative="1" as="geometry">
+            <mxPoint x="5" y="5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg3" value="3: Enter Registration Details" style="edgeLabel;html=1;align=center;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link1">
+          <mxGeometry x="-0.1" y="-35" relative="1" as="geometry">
+            <mxPoint x="5" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Link 2: Registration UI to Auth Controller -->
+        <mxCell id="link2" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="regui" target="authctrl">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg4" value="4: Submit Registration" style="edgeLabel;html=1;align=center;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link2">
+          <mxGeometry x="-0.1" y="-10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg9a" value="9a: Return Error (Email Exists)" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link2">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg10a" value="10a: Display Error (Email Exists)" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link2">
+          <mxGeometry x="-0.1" y="25" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg17b" value="17b: Registration Success Response" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link2">
+          <mxGeometry x="-0.1" y="40" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg18b" value="18b: Display Success &amp; Verify Email Prompt" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link2">
+          <mxGeometry x="-0.1" y="55" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Link 3: Auth Controller to Validation Service -->
+        <mxCell id="link3" value="" style="endArrow=none;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="authctrl" target="validsvc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg5" value="5: Validate Input Data" style="edgeLabel;html=1;align=center;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link3">
+          <mxGeometry x="-0.2" y="-10" relative="1" as="geometry">
+            <mxPoint x="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg6" value="6: Check Email Format, Password Strength" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link3">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint x="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Link 4: Validation Service to Database (Check Email) -->
+        <mxCell id="link4" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="validsvc" target="database">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg7" value="7: Check Email Exists" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link4">
+          <mxGeometry x="-0.2" y="-15" relative="1" as="geometry">
+            <mxPoint x="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg8" value="8: Return Email Status" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link4">
+          <mxGeometry x="0.2" y="15" relative="1" as="geometry">
+            <mxPoint x="15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Link 5: Auth Controller to Database (Success Path) -->
+        <mxCell id="link5" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=27.5;entryPerimeter=0;" edge="1" parent="1" source="authctrl" target="database">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg9b" value="9b: Hash Password" style="edgeLabel;html=1;align=center;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link5">
+          <mxGeometry x="-0.6" y="-10" relative="1" as="geometry">
+            <mxPoint x="-10" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg10b" value="10b: Create User Record" style="edgeLabel;html=1;align=center;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link5">
+          <mxGeometry x="-0.3" y="-10" relative="1" as="geometry">
+            <mxPoint x="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg11b" value="11b: Return User ID" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link5">
+          <mxGeometry x="-0.3" y="10" relative="1" as="geometry">
+            <mxPoint x="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg12b" value="12b: Generate Verification Token" style="edgeLabel;html=1;align=center;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link5">
+          <mxGeometry x="-0.1" y="-10" relative="1" as="geometry">
+            <mxPoint x="20" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg13b" value="13b: Store Verification Token" style="edgeLabel;html=1;align=center;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link5">
+          <mxGeometry x="0.1" y="-10" relative="1" as="geometry">
+            <mxPoint x="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg14b" value="14b: Token Stored" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link5">
+          <mxGeometry x="0.1" y="10" relative="1" as="geometry">
+            <mxPoint x="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Link 6: Auth Controller to Email Service -->
+        <mxCell id="link6" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="authctrl" target="emailsvc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg15b" value="15b: Send Verification Email" style="edgeLabel;html=1;align=center;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link6">
+          <mxGeometry x="-0.1" y="-10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg16b" value="16b: Email Sent" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link6">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Link 7: Email Service to Customer -->
+        <mxCell id="link7" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="emailsvc" target="customer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg19" value="19: Receive Verification Email" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="link7">
+          <mxGeometry x="0.2" y="10" relative="1" as="geometry">
+            <mxPoint x="-80" y="-120" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Title -->
+        <mxCell id="title" value="Collaboration Diagram: Email/Password Registration Flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="520" y="180" width="400" height="30" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

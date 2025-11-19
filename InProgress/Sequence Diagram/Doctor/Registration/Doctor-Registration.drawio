@@ -1,0 +1,241 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
+  <diagram name="Doctor Registration Sequence" id="FE_Bb49IffVXqVG6vTBK">
+    <mxGraphModel dx="1389" dy="1945" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-48" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="-10" width="1150" height="910" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-1" value="Doctor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-2" value="Registration UI" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-3" value="Backend API" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-4" value="Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="670" y="40" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-5" value="File Storage" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="860" y="40" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-6" value="Admin System" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-7" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="_NQbDowVa3kDL9lpkgoV-1" target="_NQbDowVa3kDL9lpkgoV-31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="95" y="780" as="sourcePoint" />
+            <mxPoint x="95" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-8" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1" target="_NQbDowVa3kDL9lpkgoV-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="289.5" y="100" as="sourcePoint" />
+            <mxPoint x="289.5" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-9" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1" target="_NQbDowVa3kDL9lpkgoV-29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="509.5" y="100" as="sourcePoint" />
+            <mxPoint x="509.5" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-10" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1" target="_NQbDowVa3kDL9lpkgoV-32">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="714.5" y="120" as="sourcePoint" />
+            <mxPoint x="714.5" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-11" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1" target="_NQbDowVa3kDL9lpkgoV-33">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="904.5" y="120" as="sourcePoint" />
+            <mxPoint x="904.5" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-12" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1" target="_NQbDowVa3kDL9lpkgoV-36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1089.5" y="100" as="sourcePoint" />
+            <mxPoint x="1089.5" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-13" value="1: Access registration page" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.7436" y="10" relative="1" as="geometry">
+            <mxPoint x="95" y="140" as="sourcePoint" />
+            <mxPoint x="280" y="140" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-14" value="2: Display registration form" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=open;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry x="0.641" y="-10" relative="1" as="geometry">
+            <mxPoint x="290" y="170" as="sourcePoint" />
+            <mxPoint x="110" y="170" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-15" value="3: Fill personal details&#xa;(name, email, phone, password)" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.7436" y="20" relative="1" as="geometry">
+            <mxPoint x="95" y="210" as="sourcePoint" />
+            <mxPoint x="280" y="210" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-16" value="4: Fill professional details&lt;br&gt;(specialization, qualifications,&amp;nbsp;&lt;div&gt;experience)&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.7436" y="30" relative="1" as="geometry">
+            <mxPoint x="95" y="280" as="sourcePoint" />
+            <mxPoint x="280" y="280" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-17" value="5: Upload certificates &amp;amp; experience&amp;nbsp;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; proof&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.8462" y="20" relative="1" as="geometry">
+            <mxPoint x="95" y="320" as="sourcePoint" />
+            <mxPoint x="280" y="320" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-18" value="6: Submit registration" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.4359" y="20" relative="1" as="geometry">
+            <mxPoint x="95" y="350" as="sourcePoint" />
+            <mxPoint x="280" y="350" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-19" value="7: Validate input data" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.6364" y="20" relative="1" as="geometry">
+            <mxPoint x="290" y="370" as="sourcePoint" />
+            <mxPoint x="500" y="370" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-20" value="8: Upload files to storage" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.6456" y="20" relative="1" as="geometry">
+            <mxPoint x="510" y="400" as="sourcePoint" />
+            <mxPoint x="890" y="400" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-21" value="9: Return file URLs" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=open;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry x="0.6456" y="-20" relative="1" as="geometry">
+            <mxPoint x="890" y="430" as="sourcePoint" />
+            <mxPoint x="520" y="430" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-22" value="10: Hash password" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="460" as="sourcePoint" />
+            <mxPoint x="520" y="480" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="460" />
+              <mxPoint x="540" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-23" value="11: Save doctor registration&#xa;(status: pending)" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=0.05;entryY=0.2;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="_NQbDowVa3kDL9lpkgoV-32">
+          <mxGeometry x="-0.6098" y="20" relative="1" as="geometry">
+            <mxPoint x="510" y="520" as="sourcePoint" />
+            <mxPoint x="715" y="520" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-24" value="12: Confirmation" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=open;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry x="0.5122" y="-20" relative="1" as="geometry">
+            <mxPoint x="715" y="550" as="sourcePoint" />
+            <mxPoint x="520" y="550" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-25" value="13: Notify admin of new registration" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.2414" y="20" relative="1" as="geometry">
+            <mxPoint x="510" y="570" as="sourcePoint" />
+            <mxPoint x="1080" y="570" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-26" value="14: Registration successful&#xa;(status: pending approval)" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=open;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry x="0.5455" y="-30" relative="1" as="geometry">
+            <mxPoint x="510" y="610" as="sourcePoint" />
+            <mxPoint x="300" y="610" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-27" value="15: Show success message &amp;&#xa;application tracking info" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=open;rounded=0;dashed=1;entryX=1.76;entryY=0.945;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="_NQbDowVa3kDL9lpkgoV-31">
+          <mxGeometry x="0.7436" y="-30" relative="1" as="geometry">
+            <mxPoint x="290" y="650" as="sourcePoint" />
+            <mxPoint x="95" y="650" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-28" value="Note: Doctor can track application&#xa;status (pending, processing,&#xa;approved, rejected) and view&#xa;admin comments if rejected" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;verticalAlign=top;size=15;" vertex="1" parent="1">
+          <mxGeometry x="90" y="810" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-29" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="504.5" y="360" width="10" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-30" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="284.5" y="140" width="10" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-31" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="90" y="130" width="10" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-32" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="709.5" y="510" width="10" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-33" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="899.5" y="390" width="10" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-36" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="1084.5" y="560" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-37" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=3;targetShapes=umlLifeline;" vertex="1" parent="1">
+          <mxGeometry x="80" y="760" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-39" value="" style="endArrow=none;html=1;rounded=0;entryX=0.525;entryY=0.473;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;endFill=0;" edge="1" parent="1" source="_NQbDowVa3kDL9lpkgoV-31" target="_NQbDowVa3kDL9lpkgoV-37">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="700" as="sourcePoint" />
+            <mxPoint x="300" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-40" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=3;targetShapes=umlLifeline;" vertex="1" parent="1">
+          <mxGeometry x="275" y="740" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-41" value="" style="endArrow=none;html=1;rounded=0;entryX=0.525;entryY=0.473;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;endFill=0;" edge="1" parent="1" target="_NQbDowVa3kDL9lpkgoV-40">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="291" y="660" as="sourcePoint" />
+            <mxPoint x="495" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-42" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=3;targetShapes=umlLifeline;" vertex="1" parent="1">
+          <mxGeometry x="494.5" y="700" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-43" value="" style="endArrow=none;html=1;rounded=0;entryX=0.525;entryY=0.473;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;endFill=0;" edge="1" parent="1" target="_NQbDowVa3kDL9lpkgoV-42">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510.5" y="620" as="sourcePoint" />
+            <mxPoint x="714.5" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-44" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=3;targetShapes=umlLifeline;" vertex="1" parent="1">
+          <mxGeometry x="699.5" y="640" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-45" value="" style="endArrow=none;html=1;rounded=0;entryX=0.525;entryY=0.473;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;endFill=0;" edge="1" parent="1" target="_NQbDowVa3kDL9lpkgoV-44">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="715.5" y="560" as="sourcePoint" />
+            <mxPoint x="919.5" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-46" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=3;targetShapes=umlLifeline;" vertex="1" parent="1">
+          <mxGeometry x="1075" y="680" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_NQbDowVa3kDL9lpkgoV-47" value="" style="endArrow=none;html=1;rounded=0;entryX=0.525;entryY=0.473;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;endFill=0;" edge="1" parent="1" target="_NQbDowVa3kDL9lpkgoV-46">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1091" y="600" as="sourcePoint" />
+            <mxPoint x="1295" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
