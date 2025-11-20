@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Electron" modified="2024-01-01T00:00:00.000Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="inv_collab_123" version="21.6.8" type="device">
+  <diagram id="InventoryManagementCollab" name="Inventory Management - Collaboration">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ================= ACTORS & OBJECTS ================= -->
+        
+        <!-- Salesperson Actor -->
+        <mxCell id="actor_salesperson" value="Salesperson" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="80" y="320" width="30" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Object: UI Interface -->
+        <mxCell id="obj_ui" value=":UI Interface" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="280" y="330" width="130" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Object: Inventory Controller -->
+        <mxCell id="obj_controller" value=":Inventory Controller" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="540" y="330" width="160" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Object: Inventory Service -->
+        <mxCell id="obj_service" value=":Inventory Service" style="html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="820" y="330" width="150" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Object: Database -->
+        <mxCell id="obj_database" value=":Database" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1090" y="330" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Object: Audit Service -->
+        <mxCell id="obj_audit" value=":Audit Service" style="html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1090" y="450" width="120" height="40" as="geometry" />
+        </mxCell>
+
+
+        <!-- ================= LINKS & ASSOCIATIONS ================= -->
+
+        <!-- Link: Salesperson - UI Interface -->
+        <mxCell id="link_sales_ui" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="actor_salesperson" target="obj_ui">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Link: UI Interface - Inventory Controller -->
+        <mxCell id="link_ui_ctrl" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="obj_ui" target="obj_controller">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Link: Inventory Controller - Inventory Service -->
+        <mxCell id="link_ctrl_svc" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="obj_controller" target="obj_service">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Link: Inventory Service - Database -->
+        <mxCell id="link_svc_db" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="obj_service" target="obj_database">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Link: Inventory Service - Audit Service -->
+        <mxCell id="link_svc_audit" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="obj_service" target="obj_audit">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+
+        <!-- ================= MESSAGES: Salesperson -> UI Interface ================= -->
+
+        <!-- 1. Select branch filter -->
+        <mxCell id="msg_1" value="1: Select branch filter →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_sales_ui">
+          <mxGeometry x="-0.5" y="-30" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 8. Upload Excel file -->
+        <mxCell id="msg_8" value="8: Upload Excel file →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_sales_ui">
+          <mxGeometry x="-0.5" y="-50" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 15. Edit stock quantity -->
+        <mxCell id="msg_15" value="15: Edit stock quantity →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_sales_ui">
+          <mxGeometry x="-0.3" y="-70" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 24. Select medicine to disable -->
+        <mxCell id="msg_24" value="24: Select medicine to disable →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_sales_ui">
+          <mxGeometry x="-0.2" y="-90" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 7. Display medicines list -->
+        <mxCell id="msg_7" value="7: Display medicines list ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_sales_ui">
+          <mxGeometry x="0.4" y="30" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 14. Show confirmation message -->
+        <mxCell id="msg_14" value="14: Show confirmation message ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_sales_ui">
+          <mxGeometry x="0.4" y="50" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 23. Refresh stock view -->
+        <mxCell id="msg_23" value="23: Refresh stock view ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_sales_ui">
+          <mxGeometry x="0.4" y="70" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 30. Show success notification -->
+        <mxCell id="msg_30" value="30: Show success notification ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_sales_ui">
+          <mxGeometry x="0.4" y="90" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+
+        <!-- ================= MESSAGES: UI Interface -> Inventory Controller ================= -->
+
+        <!-- 2. Request inventory list -->
+        <mxCell id="msg_2" value="2: Request inventory list →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_ui_ctrl">
+          <mxGeometry x="-0.5" y="-30" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 9. Send file for processing -->
+        <mxCell id="msg_9" value="9: Send file for processing →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_ui_ctrl">
+          <mxGeometry x="-0.4" y="-50" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 16. Submit new quantity -->
+        <mxCell id="msg_16" value="16: Submit new quantity →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_ui_ctrl">
+          <mxGeometry x="-0.2" y="-70" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 25. Request disable item -->
+        <mxCell id="msg_25" value="25: Request disable item →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_ui_ctrl">
+          <mxGeometry x="-0.1" y="-90" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 6. Filtered list -->
+        <mxCell id="msg_6" value="6: Filtered list ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_ui_ctrl">
+          <mxGeometry x="0.4" y="30" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 13. Upload success -->
+        <mxCell id="msg_13" value="13: Upload success ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_ui_ctrl">
+          <mxGeometry x="0.4" y="50" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 22. Update successful -->
+        <mxCell id="msg_22" value="22: Update successful ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_ui_ctrl">
+          <mxGeometry x="0.4" y="70" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 29. Item disabled -->
+        <mxCell id="msg_29" value="29: Item disabled ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_ui_ctrl">
+          <mxGeometry x="0.4" y="90" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+
+        <!-- ================= MESSAGES: Inventory Controller -> Inventory Service ================= -->
+
+        <!-- 3. Fetch items by branch -->
+        <mxCell id="msg_3" value="3: Fetch items by branch →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_ctrl_svc">
+          <mxGeometry x="-0.5" y="-30" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 10. Read and validate file -->
+        <mxCell id="msg_10" value="10: Read and validate file →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_ctrl_svc">
+          <mxGeometry x="-0.4" y="-50" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 17. Validate update -->
+        <mxCell id="msg_17" value="17: Validate update →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_ctrl_svc">
+          <mxGeometry x="-0.2" y="-70" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 26. Mark item as inactive -->
+        <mxCell id="msg_26" value="26: Mark item as inactive →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_ctrl_svc">
+          <mxGeometry x="-0.1" y="-90" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+
+        <!-- ================= MESSAGES: Inventory Service -> Database ================= -->
+
+        <!-- 4. Query database -->
+        <mxCell id="msg_4" value="4: Query database →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_svc_db">
+          <mxGeometry x="-0.5" y="-30" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 11. Save item data -->
+        <mxCell id="msg_11" value="11: Save item data →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_svc_db">
+          <mxGeometry x="-0.3" y="-50" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 18. Update stock record -->
+        <mxCell id="msg_18" value="18: Update stock record →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_svc_db">
+          <mxGeometry x="-0.1" y="-70" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 27. Update item status -->
+        <mxCell id="msg_27" value="27: Update item status →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_svc_db">
+          <mxGeometry x="0.1" y="-90" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 5. Return inventory data -->
+        <mxCell id="msg_5" value="5: Return inventory data ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_svc_db">
+          <mxGeometry x="0.4" y="30" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 19. Database updated -->
+        <mxCell id="msg_19" value="19: Database updated ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_svc_db">
+          <mxGeometry x="0.4" y="50" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+
+        <!-- ================= MESSAGES: Inventory Service -> Audit Service ================= -->
+
+        <!-- 12. Log upload action -->
+        <mxCell id="msg_12" value="12: Log upload action →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_svc_audit">
+          <mxGeometry x="-0.3" y="-20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 20. Record stock change log -->
+        <mxCell id="msg_20" value="20: Record stock change log →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_svc_audit">
+          <mxGeometry x="-0.1" y="-40" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 28. Log deletion/disable -->
+        <mxCell id="msg_28" value="28: Log deletion/disable →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_svc_audit">
+          <mxGeometry x="0.1" y="-60" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 21. Log saved -->
+        <mxCell id="msg_21" value="21: Log saved ←" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=9;" vertex="1" connectable="0" parent="link_svc_audit">
+          <mxGeometry x="0.3" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+
+        <!-- ================= TITLE & LEGEND ================= -->
+
+        <!-- Title -->
+        <mxCell id="title" value="Inventory Management - Collaboration Diagram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="480" y="40" width="440" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Legend Box -->
+        <mxCell id="legend_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="560" width="320" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- Legend Content -->
+        <mxCell id="legend_title" value="Legend &amp; Workflows:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="570" width="300" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend_text" value="─── Association with messages&#xa;&#xa;Main Workflows:&#xa;• View Inventory (1-7)&#xa;  - Select branch filter&#xa;  - Fetch and display items&#xa;&#xa;• Upload Excel File (8-14)&#xa;  - Upload file&#xa;  - Validate and save&#xa;  - Log action&#xa;&#xa;• Edit Stock Quantity (15-23)&#xa;  - Edit quantity&#xa;  - Validate and update&#xa;  - Log change&#xa;&#xa;• Disable Medicine (24-30)&#xa;  - Select medicine&#xa;  - Mark inactive&#xa;  - Log deletion" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="595" width="300" height="195" as="geometry" />
+        </mxCell>
+
+        <!-- Authentication Reference -->
+        <mxCell id="auth_ref" value="ref: Authentication" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="100" width="1000" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Notes Box -->
+        <mxCell id="notes_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="400" y="560" width="320" height="240" as="geometry" />
+        </mxCell>
+
+        <mxCell id="notes_title" value="Key Interactions:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="410" y="570" width="300" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="notes_text" value="1. Salesperson authenticated&#xa;2. Branch filter applied&#xa;3. Inventory fetched from DB&#xa;4. Excel upload processed&#xa;5. Items validated and saved&#xa;6. Upload action logged&#xa;7. Stock quantity edited&#xa;8. Update validated&#xa;9. Stock record updated in DB&#xa;10. Stock change logged&#xa;11. Medicine disabled (soft delete)&#xa;12. Item status updated&#xa;13. Deletion logged&#xa;14. All actions audited" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="410" y="595" width="300" height="195" as="geometry" />
+        </mxCell>
+
+        <!-- Components Box -->
+        <mxCell id="components_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="760" y="560" width="300" height="240" as="geometry" />
+        </mxCell>
+
+        <mxCell id="components_title" value="Components:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="770" y="570" width="280" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="components_text" value="• UI Interface&#xa;  User interaction layer&#xa;&#xa;• Inventory Controller&#xa;  Request handler &amp; validator&#xa;&#xa;• Inventory Service&#xa;  Business logic layer&#xa;&#xa;• Database&#xa;  Data persistence&#xa;&#xa;• Audit Service&#xa;  Activity logging" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="770" y="595" width="280" height="195" as="geometry" />
+        </mxCell>
+
+        <!-- Business Rules Box -->
+        <mxCell id="rules_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="560" width="260" height="240" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rules_title" value="Business Rules:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1110" y="570" width="240" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rules_text" value="• Branch filtering enforced&#xa;• Excel format validated&#xa;• Stock quantities non-negative&#xa;• Soft delete for medicines&#xa;• All operations logged&#xa;• Audit trail immutable&#xa;• Real-time data sync&#xa;• Transaction rollback on error&#xa;• File size limits enforced&#xa;• Authentication required" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="595" width="240" height="195" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

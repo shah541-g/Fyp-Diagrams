@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="5.0" version="21.0.0" etag="abc123" type="device">
+  <diagram name="Branch Management - Collaboration" id="branch-management-collab">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Actors -->
+        <mxCell id="superAdmin" value="Super Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="350" width="30" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="branchAdmin" value="Branch Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="450" width="30" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="salesperson" value="Salesperson" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="650" width="30" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Objects/Components -->
+        <mxCell id="authSystem" value=":Authentication System" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="240" y="350" width="160" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="branchMgmtService" value=":Branch Management Service" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="520" y="200" width="180" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="userMgmtService" value=":User Management Service" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="500" width="180" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="database" value=":Database" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="900" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="notificationService" value=":Notification Service" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="450" width="160" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="activityLogService" value=":Activity Log Service" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Super Admin to Authentication System -->
+        <mxCell id="link1" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="superAdmin" target="authSystem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_admin_auth" value="ref: Super Admin Authentication" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#f5f5f5;fontSize=11;fontStyle=1" vertex="1" connectable="0" parent="link1">
+          <mxGeometry x="0.0" y="0" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Authentication System to Branch Management Service -->
+        <mxCell id="link2" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="authSystem" target="branchMgmtService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_auth_branch_1" value="1: Create Branch Request&#xa;20: Update Branch Request&#xa;23: Delete Branch Request&#xa;31: View All Branches Request" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;fontSize=9;" vertex="1" connectable="0" parent="link2">
+          <mxGeometry x="-0.2" y="2" relative="1" as="geometry">
+            <mxPoint x="10" y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_auth_branch_2" value="6: return success message&#xa;22: return update successful&#xa;26: return error/success&#xa;33: return branches list" style="edgeLabel;html=1;align=right;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;fontSize=9;" vertex="1" connectable="0" parent="link2">
+          <mxGeometry x="0.2" y="-2" relative="1" as="geometry">
+            <mxPoint x="-10" y="-25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Authentication System to User Management Service -->
+        <mxCell id="link3" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="authSystem" target="userMgmtService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_auth_user_1" value="7: Assign Branch Admin&#xa;13: Add Salesperson" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;fontSize=9;" vertex="1" connectable="0" parent="link3">
+          <mxGeometry x="-0.2" y="2" relative="1" as="geometry">
+            <mxPoint x="10" y="15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_auth_user_2" value="12: return admin assigned successfully&#xa;19: return salesperson added successfully" style="edgeLabel;html=1;align=right;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;fontSize=9;" vertex="1" connectable="0" parent="link3">
+          <mxGeometry x="0.2" y="-2" relative="1" as="geometry">
+            <mxPoint x="-10" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Branch Management Service to Database -->
+        <mxCell id="link4" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="branchMgmtService" target="database">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_branch_db_1" value="2: Validate Branch Data&#xa;3: Save Branch (location, contact, details)&#xa;21: Update Branch Data&#xa;24: Check Active Operations&#xa;27: Soft Delete Branch&#xa;32: Query All Branches" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;fontSize=9;" vertex="1" connectable="0" parent="link4">
+          <mxGeometry x="-0.15" y="2" relative="1" as="geometry">
+            <mxPoint x="10" y="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_branch_db_2" value="4: return branch_id&#xa;25: return has_active_operations&#xa;27: return no_active_operations" style="edgeLabel;html=1;align=right;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;fontSize=9;" vertex="1" connectable="0" parent="link4">
+          <mxGeometry x="0.15" y="-2" relative="1" as="geometry">
+            <mxPoint x="-10" y="-25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- User Management Service to Database -->
+        <mxCell id="link5" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="userMgmtService" target="database">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_user_db_1" value="8: Create Admin User Account&#xa;10: Assign Branch(es) to Admin&#xa;14: Validate Salesperson Data&#xa;15: Create Salesperson Account&#xa;17: Assign to Branch&#xa;28: Reassign Branch Admins &amp; Salespersons" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;fontSize=9;" vertex="1" connectable="0" parent="link5">
+          <mxGeometry x="-0.15" y="2" relative="1" as="geometry">
+            <mxPoint x="10" y="35" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_user_db_2" value="9: return admin_id&#xa;16: return salesperson_id" style="edgeLabel;html=1;align=right;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;fontSize=9;" vertex="1" connectable="0" parent="link5">
+          <mxGeometry x="0.15" y="-2" relative="1" as="geometry">
+            <mxPoint x="-10" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Branch Management Service to Activity Log Service -->
+        <mxCell id="link6" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="branchMgmtService" target="activityLogService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_branch_log" value="5: Log Branch Creation&#xa;30: Log Deletion Event" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;fontSize=10;" vertex="1" connectable="0" parent="link6">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint y="15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- User Management Service to Notification Service -->
+        <mxCell id="link7" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="userMgmtService" target="notificationService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_user_notif" value="11: Send Welcome Email&#xa;18: Send Login Credentials&#xa;29: Notify Affected Users" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;fontSize=10;" vertex="1" connectable="0" parent="link7">
+          <mxGeometry x="-0.05" y="2" relative="1" as="geometry">
+            <mxPoint y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Notification Service to Branch Admin -->
+        <mxCell id="link8" value="" style="endArrow=none;html=1;rounded=0;dashed=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="notificationService" target="branchAdmin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_notif_admin" value="Email: Account Created&#xa;Email: Branch Reassigned" style="edgeLabel;html=1;align=center;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;fontSize=10;" vertex="1" connectable="0" parent="link8">
+          <mxGeometry x="0.0" y="-2" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Notification Service to Salesperson -->
+        <mxCell id="link9" value="" style="endArrow=none;html=1;rounded=0;dashed=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="notificationService" target="salesperson">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_notif_sales" value="Email: Login Credentials&#xa;Email: Branch Reassigned" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;fontSize=10;" vertex="1" connectable="0" parent="link9">
+          <mxGeometry x="0.0" y="2" relative="1" as="geometry">
+            <mxPoint y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Title -->
+        <mxCell id="title" value="Branch Management - Collaboration Diagram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="500" y="40" width="600" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Legend -->
+        <mxCell id="legend" value="Legend:&#xa;──── Association with messages&#xa;- - - - System-initiated notification&#xa;&#xa;Main Workflows:&#xa;• Create Branch (1-6)&#xa;• Assign Branch Admin (7-12)&#xa;• Add Salesperson (13-19)&#xa;• Update Branch (20-22)&#xa;• Delete Branch (23-30)&#xa;• View All Branches (31-33)" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontColor=#333333;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="280" height="210" as="geometry" />
+        </mxCell>
+        
+        <!-- Additional Notes -->
+        <mxCell id="note1" value="Key Interactions:&#xa;&#xa;1. Super Admin authenticates via Authentication System&#xa;2. Create Branch: Validates and saves branch data&#xa;3. Branch creation logged to Activity Log Service&#xa;4. Assign Branch Admin: Creates user account&#xa;5. Welcome email sent to new Branch Admin&#xa;6. Add Salesperson: Creates account and assigns to branch&#xa;7. Login credentials sent via Notification Service&#xa;8. Update Branch: Modifies existing branch data&#xa;9. Delete Branch: Checks for active operations first&#xa;10. If active operations exist, deletion is prevented&#xa;11. If no active operations, soft delete and reassign users&#xa;12. Affected users notified of reassignment&#xa;13. View Branches: Queries and returns all branch data" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="880" width="320" height="280" as="geometry" />
+        </mxCell>
+        
+        <!-- Component Descriptions -->
+        <mxCell id="components" value="Components:&#xa;&#xa;• Authentication System: Handles Super Admin login&#xa;• Branch Management Service: Core branch operations&#xa;• User Management Service: User account management&#xa;• Database: Stores all persistent data&#xa;• Notification Service: Email notifications&#xa;• Activity Log Service: Audit trail logging" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="400" y="880" width="320" height="180" as="geometry" />
+        </mxCell>
+        
+        <!-- Business Rules -->
+        <mxCell id="rules" value="Business Rules:&#xa;&#xa;• Branches cannot be deleted if they have active operations&#xa;• Branch deletion is soft delete (logical, not physical)&#xa;• All user assignments trigger email notifications&#xa;• Branch admins can be assigned to multiple branches&#xa;• Salespersons are assigned to specific branches&#xa;• All operations are logged for audit purposes&#xa;• Branch data includes: location, contact, details&#xa;• User data validation occurs before account creation" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="760" y="880" width="340" height="220" as="geometry" />
+        </mxCell>
+        
+        <!-- Security Notes -->
+        <mxCell id="security" value="Security Considerations:&#xa;&#xa;• Authentication required before any operation&#xa;• Only Super Admin can manage branches&#xa;• User credentials securely generated&#xa;• Activity logging for all operations&#xa;• Branch reassignment maintains data integrity&#xa;• Validation at multiple layers (UI, Service, DB)" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="880" width="320" height="180" as="geometry" />
+        </mxCell>
+        
+        <!-- Message Flow Indicators -->
+        <mxCell id="flow1" value="Branch Operations Flow" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="520" y="120" width="180" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow2" value="User Management Flow" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="520" y="620" width="180" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow3" value="Notification &amp; Logging Flow" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1150" y="120" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Conditional Flow Notes -->
+        <mxCell id="conditional" value="Conditional Logic:&#xa;&#xa;Delete Branch Operation:&#xa;• IF hasActiveOperations = TRUE&#xa;  → Return error: cannot delete&#xa;• ELSE (no active operations)&#xa;  → Soft delete branch&#xa;  → Reassign users&#xa;  → Notify affected users&#xa;  → Log deletion event" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="40" width="220" height="200" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
