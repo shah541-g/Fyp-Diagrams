@@ -1,0 +1,161 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="5.0" version="21.0.0" etag="xyz789" type="device">
+  <diagram name="Doctor Appointment - Collaboration" id="doctor-appointment-collab">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Actors -->
+        <mxCell id="doctor" value="Doctor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="300" width="30" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="patient" value="Patient" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="500" width="30" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Objects/Components -->
+        <mxCell id="webApp" value=":Web Application" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="240" y="300" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="appointmentService" value=":Appointment Service" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="180" width="160" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="videoCallService" value=":Video Call Service" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="880" y="500" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="database" value=":Database" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Doctor to Web Application -->
+        <mxCell id="link1" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="doctor" target="webApp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_doc_web_1" value="1: Login &amp; Access Dashboard&#xa;7: Select Appointment&#xa;13: Accept/Reject&#xa;20: Start Video Consultation&#xa;29: Add Prescription" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;fontSize=10;" vertex="1" connectable="0" parent="link1">
+          <mxGeometry x="-0.3" y="2" relative="1" as="geometry">
+            <mxPoint x="15" y="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_doc_web_2" value="6: Display Requests&#xa;12: Display Patient Details&#xa;19: Show Confirmation&#xa;25: Video Call Active&#xa;33: Provide Download Link" style="edgeLabel;html=1;align=right;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;fontSize=10;" vertex="1" connectable="0" parent="link1">
+          <mxGeometry x="0.3" y="-2" relative="1" as="geometry">
+            <mxPoint x="-15" y="-25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Web Application to Appointment Service -->
+        <mxCell id="link2" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="webApp" target="appointmentService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_web_appt_1" value="2: Fetch Pending Appointments&#xa;8: Fetch Patient Medical History&#xa;14: Update Appointment Status&#xa;30: Save Prescription Data" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;fontSize=9;" vertex="1" connectable="0" parent="link2">
+          <mxGeometry x="-0.2" y="2" relative="1" as="geometry">
+            <mxPoint x="15" y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_web_appt_2" value="5: Return Appointment Data&#xa;11: Return Patient Data&#xa;18: Confirm Action&#xa;32: Generate PDF" style="edgeLabel;html=1;align=right;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;fontSize=9;" vertex="1" connectable="0" parent="link2">
+          <mxGeometry x="0.2" y="-2" relative="1" as="geometry">
+            <mxPoint x="-10" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Appointment Service to Database -->
+        <mxCell id="link3" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="appointmentService" target="database">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_appt_db_1" value="3: Query Appointments&#xa;9: Query Patient Records&#xa;15: Update Database&#xa;31: Store Prescription" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;fontSize=10;" vertex="1" connectable="0" parent="link3">
+          <mxGeometry x="-0.15" y="2" relative="1" as="geometry">
+            <mxPoint x="15" y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_appt_db_2" value="4: Return Appointment List&#xa;10: Return Medical History&#xa;16: Confirm Update" style="edgeLabel;html=1;align=right;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;fontSize=10;" vertex="1" connectable="0" parent="link3">
+          <mxGeometry x="0.15" y="-2" relative="1" as="geometry">
+            <mxPoint x="-10" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Web Application to Video Call Service -->
+        <mxCell id="link4" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="webApp" target="videoCallService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_web_video_1" value="21: Initialize Video Call&#xa;27: End Video Call" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;fontSize=10;" vertex="1" connectable="0" parent="link4">
+          <mxGeometry x="-0.2" y="2" relative="1" as="geometry">
+            <mxPoint x="15" y="15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_web_video_2" value="24: Establish Connection" style="edgeLabel;html=1;align=right;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;fontSize=10;" vertex="1" connectable="0" parent="link4">
+          <mxGeometry x="0.2" y="-2" relative="1" as="geometry">
+            <mxPoint x="-10" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Video Call Service to Patient -->
+        <mxCell id="link5" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="videoCallService" target="patient">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_video_patient_1" value="22: Notify Patient&#xa;26: Conduct Consultation" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;fontSize=10;" vertex="1" connectable="0" parent="link5">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint y="15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_video_patient_2" value="23: Join Video Call" style="edgeLabel;html=1;align=center;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;fontSize=10;" vertex="1" connectable="0" parent="link5">
+          <mxGeometry x="0.1" y="-2" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Video Call Service to Database -->
+        <mxCell id="link6" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="videoCallService" target="database">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_video_db" value="28: Save Recording Metadata" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=none;fontSize=10;" vertex="1" connectable="0" parent="link6">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="15" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Database to Patient (Notification) -->
+        <mxCell id="link7" value="" style="endArrow=none;html=1;rounded=0;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="database" target="patient">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_db_patient" value="17: Send Notification to Patient" style="edgeLabel;html=1;align=center;verticalAlign=top;resizable=0;points=[];labelBackgroundColor=none;fontSize=10;" vertex="1" connectable="0" parent="link7">
+          <mxGeometry x="0.05" y="-2" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Title -->
+        <mxCell id="title" value="Doctor Appointment Management - Collaboration Diagram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="500" y="40" width="600" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Legend -->
+        <mxCell id="legend" value="Legend:&#xa;─── Association with messages&#xa;- - - System-initiated notification&#xa;&#xa;Main Workflows:&#xa;• View Appointments (1-6)&#xa;• Review Patient Details (7-12)&#xa;• Accept/Reject Appointment (13-19)&#xa;• Conduct Video Consultation (20-28)&#xa;• Add Prescription (29-33)" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontColor=#333333;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="280" height="180" as="geometry" />
+        </mxCell>
+        
+        <!-- Additional Notes -->
+        <mxCell id="note1" value="Key Interactions:&#xa;&#xa;1. Doctor logs in and views pending appointments&#xa;2. System fetches appointments from database&#xa;3. Doctor reviews patient medical history&#xa;4. Doctor accepts/rejects appointment&#xa;5. Patient receives notification&#xa;6. Video consultation is initiated&#xa;7. Both parties join video call&#xa;8. Doctor adds prescription post-consultation&#xa;9. Prescription saved and PDF generated" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="40" width="220" height="220" as="geometry" />
+        </mxCell>
+        
+        <!-- Component Descriptions -->
+        <mxCell id="components" value="Components:&#xa;&#xa;• Web Application: User interface for doctor&#xa;• Appointment Service: Business logic handler&#xa;• Video Call Service: WebRTC/video platform&#xa;• Database: Stores all persistent data" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="900" width="280" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Message Flow Indicators -->
+        <mxCell id="flow1" value="Appointment Management Flow" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="520" y="100" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow2" value="Video Consultation Flow" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="850" y="620" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
