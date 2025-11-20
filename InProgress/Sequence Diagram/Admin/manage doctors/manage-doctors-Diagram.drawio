@@ -1,0 +1,405 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
+  <diagram name="Super Admin Manage Doctors" id="0qmD-SUER6DDEcuflQ5F">
+    <mxGraphModel dx="3166" dy="1409" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MlZPhsPeFGRbENBHooL1-101" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-200" width="1440" height="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-59" value="" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="20" height="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-61" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-59">
+          <mxGeometry x="5" y="50" width="10" height="940" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-2" value="Admin Dashboard" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="120" height="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-54" value="33: Request reviews analytics" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-99.99999999999989" y="850.0008737864077" as="sourcePoint" />
+            <mxPoint x="59.5" y="850.0008737864077" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-45" value="26: Select doctor to freeze" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-99.99999999999989" y="720.0008737864077" as="sourcePoint" />
+            <mxPoint x="59.5" y="720.0008737864077" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-12" value="1: View pending doctors" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-99.99999999999989" y="180.00087378640774" as="sourcePoint" />
+            <mxPoint x="59.49999999999977" y="180.00087378640774" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-58" value="37: Display review analytics" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.49999999999977" y="920" as="sourcePoint" />
+            <mxPoint x="-100.40909090909076" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-55" value="34: Fetch reviews stats" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.730769230769056" y="870" as="sourcePoint" />
+            <mxPoint x="239.5" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-46" value="27: Confirm suspension" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.730769230769056" y="740" as="sourcePoint" />
+            <mxPoint x="239.5" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-13" value="2: Request pending list" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.730769230769056" y="200" as="sourcePoint" />
+            <mxPoint x="239.5" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-20" value="7: Approve doctor" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-99.99999999999989" y="280.00087378640774" as="sourcePoint" />
+            <mxPoint x="59.5" y="280.00087378640774" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-36" value="19: Display doctor details" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.5" y="580" as="sourcePoint" />
+            <mxPoint x="-100.00117647058806" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-51" value="32: Show confirmation" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="MlZPhsPeFGRbENBHooL1-2" target="MlZPhsPeFGRbENBHooL1-59">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.94" y="820" as="sourcePoint" />
+            <mxPoint x="-90.00117647058806" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-35" value="18: Search doctor profile" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-99.99999999999989" y="560.0008737864077" as="sourcePoint" />
+            <mxPoint x="59.5" y="560.0008737864075" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-37" value="20: Edit details (fee, specialization)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-89.99999999999989" y="610.0008737864077" as="sourcePoint" />
+            <mxPoint x="59.5" y="610.0008737864077" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-63" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=3;targetShapes=umlLifeline;" vertex="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry x="45" y="1010" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-69" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry x="55" y="170" width="10" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-72" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry x="55" y="560" width="10" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-73" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry x="55" y="690" width="10" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-74" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry x="55" y="820" width="10" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-75" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-2">
+          <mxGeometry x="55" y="900" width="10" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-3" value="Admin Controller" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="120" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-47" value="28: Set status to Frozen" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.323529411764866" y="760" as="sourcePoint" />
+            <mxPoint x="239.49999999999955" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-39" value="22: Validate and update" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.323529411764866" y="630" as="sourcePoint" />
+            <mxPoint x="239.49999999999955" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-22" value="9: Update doctor status" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.323529411764866" y="330" as="sourcePoint" />
+            <mxPoint x="239.49999999999955" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-14" value="3: Fetch new registrations" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.323529411764866" y="210" as="sourcePoint" />
+            <mxPoint x="239.49999999999955" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-21" value="8: Set status to Active" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-120.26923076923094" y="310" as="sourcePoint" />
+            <mxPoint x="59.5" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-38" value="21: Submit changes" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-120.26923076923094" y="620" as="sourcePoint" />
+            <mxPoint x="59.5" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-42" value="25: Update successful" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="MlZPhsPeFGRbENBHooL1-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.5" y="690" as="sourcePoint" />
+            <mxPoint x="-120.26923076923094" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-56" value="35: Get reviews from DB" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.323529411764866" y="880" as="sourcePoint" />
+            <mxPoint x="409.49999999999955" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-76" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-3">
+          <mxGeometry x="55" y="200" width="10" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-78" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-3">
+          <mxGeometry x="55" y="620" width="10" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-79" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-3">
+          <mxGeometry x="55" y="690" width="10" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-80" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-3">
+          <mxGeometry x="55" y="740" width="10" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-81" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-3">
+          <mxGeometry x="55" y="870" width="10" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-4" value="Doctor Service" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="120" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-49" value="30: Send suspension notice" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.9135294117649" y="790" as="sourcePoint" />
+            <mxPoint x="400.0899999999996" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-48" value="29: Update status in DB" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.323529411764866" y="770" as="sourcePoint" />
+            <mxPoint x="229.49999999999955" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-16" value="5: List of applicants" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="MlZPhsPeFGRbENBHooL1-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230.1799999999995" y="240" as="sourcePoint" />
+            <mxPoint x="60.003529411764816" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-15" value="4: Query pending users" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.323529411764866" y="220" as="sourcePoint" />
+            <mxPoint x="229.49999999999955" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-23" value="10: Update record" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.323529411764866" y="350" as="sourcePoint" />
+            <mxPoint x="229.49999999999955" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-24" value="11: Send welcome email" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.9135294117649" y="370" as="sourcePoint" />
+            <mxPoint x="400.0899999999996" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-25" value="12: Log approval action" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.323529411764866" y="400" as="sourcePoint" />
+            <mxPoint x="569.4999999999995" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-30" value="15: Delete/Archive record" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.323529411764866" y="480" as="sourcePoint" />
+            <mxPoint x="229.49999999999955" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-31" value="16: Send rejection email" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60.003529411764816" y="500" as="sourcePoint" />
+            <mxPoint x="400.1799999999995" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-32" value="17: Log rejection" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60.003529411764816" y="520" as="sourcePoint" />
+            <mxPoint x="570.1799999999996" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-40" value="23: Save changes to database" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.323529411764866" y="650" as="sourcePoint" />
+            <mxPoint x="229.49999999999955" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-57" value="36: Reviews data" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="MlZPhsPeFGRbENBHooL1-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="229.5" y="900" as="sourcePoint" />
+            <mxPoint x="-300.26923076923094" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-82" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-4">
+          <mxGeometry x="55" y="210" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-85" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-4">
+          <mxGeometry x="55" y="630" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-86" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-4">
+          <mxGeometry x="55" y="760" width="10" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-5" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="700" y="40" width="100" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-41" value="24: Log profile update" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="MlZPhsPeFGRbENBHooL1-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-120.67647058823513" y="670" as="sourcePoint" />
+            <mxPoint x="389.49999999999955" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-87" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-5">
+          <mxGeometry x="45" y="215" width="10" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-94" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-5">
+          <mxGeometry x="45" y="640" width="10" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-96" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-5">
+          <mxGeometry x="45" y="760" width="10" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-100" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-5">
+          <mxGeometry x="45" y="870" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-6" value="Notification Service" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="860" y="40" width="120" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-97" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-6">
+          <mxGeometry x="55" y="790" width="10" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-7" value="Audit Service" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="40" width="100" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-95" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="MlZPhsPeFGRbENBHooL1-7">
+          <mxGeometry x="45" y="660" width="10" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-8" value="ref" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="130" width="1090" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-9" value="Super Admin Authentication (2FA)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="500" y="145" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-17" value="6: Display registration requests" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="579.88" y="290" as="sourcePoint" />
+            <mxPoint x="220.11076923076905" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-18" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="300" width="1330" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-19" value="[Approve Registration]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="-110" y="370" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-26" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="460" width="1330" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-27" value="[Reject Registration]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="-100" y="480" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-29" value="14: Update status to Rejected" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220.11076923076905" y="510" as="sourcePoint" />
+            <mxPoint x="579.88" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-60" value="Super Admin" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="30" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-28" value="13: Reject doctor" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="MlZPhsPeFGRbENBHooL1-70">
+          <mxGeometry x="1" y="-89" relative="1" as="geometry">
+            <mxPoint x="60.000000000000114" y="500.00087378640774" as="sourcePoint" />
+            <mxPoint x="219.5" y="500.00087378640774" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-50" value="31: Log suspension (Security)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="MlZPhsPeFGRbENBHooL1-98">
+          <mxGeometry x="1" y="-300" relative="1" as="geometry">
+            <mxPoint x="579.3235294117649" y="850" as="sourcePoint" />
+            <mxPoint x="1089.4999999999995" y="850" as="targetPoint" />
+            <mxPoint x="1" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-62" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=3;targetShapes=umlLifeline;" vertex="1" parent="1">
+          <mxGeometry x="45" y="1050" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-64" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=3;targetShapes=umlLifeline;" vertex="1" parent="1">
+          <mxGeometry x="385" y="1050" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-65" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=3;targetShapes=umlLifeline;" vertex="1" parent="1">
+          <mxGeometry x="565" y="1050" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-66" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=3;targetShapes=umlLifeline;" vertex="1" parent="1">
+          <mxGeometry x="735" y="1050" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-67" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=3;targetShapes=umlLifeline;" vertex="1" parent="1">
+          <mxGeometry x="905" y="1050" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-68" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=3;targetShapes=umlLifeline;" vertex="1" parent="1">
+          <mxGeometry x="1075" y="1040" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-71" value="" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" target="MlZPhsPeFGRbENBHooL1-70">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60.000000000000114" y="500.00087378640774" as="sourcePoint" />
+            <mxPoint x="219.5" y="500.00087378640774" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-70" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="215" y="490" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-77" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="395" y="350" width="10" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-83" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="575" y="370" width="10" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-84" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="575" y="510" width="10" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-88" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="745" y="380" width="10" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-89" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="915" y="397.5" width="10" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-90" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="1085" y="432.5" width="10" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-91" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="745" y="510" width="10" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-92" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="915" y="535" width="10" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-93" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="1085" y="552.5" width="10" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-99" value="" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" target="MlZPhsPeFGRbENBHooL1-98">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="579.3235294117649" y="850" as="sourcePoint" />
+            <mxPoint x="1089.4999999999995" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MlZPhsPeFGRbENBHooL1-98" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="1085" y="845" width="10" height="15" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
